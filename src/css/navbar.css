@@ -1,0 +1,114 @@
+.dropdown:hover .page-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.page-dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #f5f5f5;
+    width: 230px;
+    padding: 18px;
+    border-radius: 6px;
+    top: 56px;
+    left: -20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transition: all .4s;
+    transform-origin: top center;
+}
+.dropdown-link {
+    transition: all 0.3s linear;
+}
+.dropdown-link:hover {
+    transform: translateX(10px);
+    color: #1363df;
+}
+.search {
+    font-size: 14px;
+}
+.cate-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: 42px;
+    left: -1px;
+    background: #fff;
+    border-bottom: 1px solid #d0dae9;
+    border-left: 1px solid #d0dae9;
+    border-right: 1px solid #d0dae9;
+    border-radius: 0 0 4px 4px;
+    padding: 8px 14px;
+    width: 101%;
+}
+.btn-login {
+    background-color: #1363df;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.btn-login:hover {
+    background-color: #082a5e;
+}
+
+/* Mobile nav */
+
+.nav-link-mobile {
+    padding: 10px 20px;
+    border-top: 1px solid #d0dae9;
+    color: #082a5e;
+}
+.nav-link-mobile:last-child{
+    border-bottom: 1px solid #d0dae9;
+}
+.nav-link-mobile-drop {
+    padding: 10px 10px 10px 45px;
+    border-top: 1px solid #d0dae9;
+    color: #082a5e;
+}
+.drop-mobile-menus-show {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    transform: scaleY(1);
+    transition: all 0.4s;
+    transform-origin: top;
+}
+.drop-mobile-menus-hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.4s;
+}
+.btn-register {
+    padding: 10px 30px;
+    border: 1px solid #1363df;
+    border-radius: 4px;
+    color: #1363df;
+}
+.btn-register:hover {
+    background-color: #082a5e;
+    color: #fff;
+}
+.social-icon {
+    font-size: 20px;
+    background-color: #fff;
+    color: #082a5e;
+    border: 1px solid #d0dae9;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    transition: all 0.4s ease-in;
+}
+.social-icon:hover {
+    background-color: #1363df;
+    color: #fff;
+}
