@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
@@ -12,26 +9,25 @@ export default {
     themes: [
       {
         mytheme: {
-        
-"primary": "#1363df",
-        
-"secondary": "#082a5e",
-        
-"accent": "#ffffff",
-        
-"neutral": "#ffffff",
-        
-"base-100": "#ffffff",
-        
-"info": "#ffffff",
-        
-"success": "#00ffff",
-        
-"warning": "#ffffff",
-        
-"error": "#ffffff",
+          primary: "#1363df",
+
+          secondary: "#082a5e",
+
+          accent: "#ffffff",
+
+          neutral: "#39557e",
+
+          "base-100": "#ffffff",
+
+          info: "#ffffff",
+
+          success: "#00ffff",
+
+          warning: "#ffffff",
+
+          error: "#ffffff",
         },
       },
     ],
-  }
-}
+  },
+};

@@ -1,3 +1,6 @@
+.nav-link.active{
+    color: #1363df;
+}
 .dropdown:hover .page-dropdown {
     opacity: 1;
     visibility: visible;
@@ -41,7 +44,7 @@
     border-bottom: 1px solid #d0dae9;
     border-left: 1px solid #d0dae9;
     border-right: 1px solid #d0dae9;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px;
     padding: 8px 14px;
     width: 101%;
 }
@@ -63,6 +66,9 @@
     border-top: 1px solid #d0dae9;
     color: #082a5e;
 }
+.nav-link-mobile.active {
+    border-left: 2px solid #1363df;
+}
 .nav-link-mobile:last-child{
     border-bottom: 1px solid #d0dae9;
 }
@@ -70,6 +76,9 @@
     padding: 10px 10px 10px 45px;
     border-top: 1px solid #d0dae9;
     color: #082a5e;
+}
+.nav-link-mobile-drop.active {
+    border-left: 2px solid #1363df;
 }
 .drop-mobile-menus-show {
     opacity: 1;
