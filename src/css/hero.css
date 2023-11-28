@@ -4,3 +4,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.hero-title {
+    line-height: 42px;
+}
+@media (min-width: 768px) {
+    .hero-title {
+        line-height: 52px;
+    }
+}
+@media (min-width: 1024px) {
+    .hero-title {
+        line-height: 62px;
+    }
+}
+@media (min-width: 1280px) {
+    .hero-title {
+        line-height: 68px;
+    }
+}

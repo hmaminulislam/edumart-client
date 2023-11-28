@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LogoImg from '../../assets/navbar/logo.png';
 import '../../css/navbar.css'
@@ -12,8 +12,27 @@ import { IoMdClose } from "react-icons/io";
 
 export default function Navbar() {
     const [catOpen, setCatOpen] = useState(false)
-    const [dropMenu, setDropMenu] = useState(false)
-    
+  const [dropMenu, setDropMenu] = useState(false)
+  const cateBtn = useRef()
+  const cateBtnEleIcon1 = useRef()
+  const cateBtnEleIcon2 = useRef()
+  const cateBtnEle = useRef()
+  const cateElement = useRef()
+    // category menu close other side click 
+  window.addEventListener('click', (e) => {
+    if (
+      e.target !== cateBtn.current &&
+      e.target !== cateElement.current &&
+      e.target !== cateBtnEle.current &&
+      e.target !== cateBtnEleIcon1.current &&
+      e.target !== cateBtnEleIcon2.current
+    ) {
+      setCatOpen(false);
+      console.log("other side click");
+    } else {
+      console.log("in side click");
+    }
+  })
   return (
     <div className="max-w-[1660px] h-[90px] mx-auto px-[16px] sm:px-5 flex items-center justify-between">
       {/* Navbar Left  */}
@@ -108,18 +127,35 @@ export default function Navbar() {
             {/* Navbar Categories  */}
             <div>
               <div
-                onClick={() => setCatOpen(!catOpen)}
-                className={`flex items-center gap-[8px] border-[#d0dae9] border-r-0 border rounded-[4px] py-[10px] px-[14px] relative cursor-pointer`}
+                className={`relative border-[#d0dae9] border-r-0 border rounded-[4px]`}
               >
-                <FontAwesomeIcon className="text-primary" icon={faGrip} />
-                <span className="text-secondary text-[14px]">Categories</span>
-                <FontAwesomeIcon
-                  className="text-[14px] mt-[3px]"
-                  icon={faAngleDown}
-                />
-
+                <button
+                  ref={cateBtn}
+                  onClick={() => setCatOpen(!catOpen)}
+                  className="flex items-center gap-[8px] py-[10px] px-[14px] cursor-pointer w-[100%]"
+                >
+                  <FontAwesomeIcon
+                    ref={cateBtnEleIcon1}
+                    onClick={() => setCatOpen(!catOpen)}
+                    className="text-primary"
+                    icon={faGrip}
+                  />
+                  <span
+                    onClick={() => setCatOpen(!catOpen)}
+                    ref={cateBtnEle}
+                    className="text-secondary text-[14px]"
+                  >
+                    Categories
+                  </span>
+                  <FontAwesomeIcon
+                    onClick={() => setCatOpen(!catOpen)}
+                    ref={cateBtnEleIcon2}
+                    className="text-[14px] mt-[3px]"
+                    icon={faAngleDown}
+                  />
+                </button>
                 {catOpen ? (
-                  <div className="cate-dropdown">
+                  <div ref={cateElement} className="cate-dropdown">
                     <span className="text-secondary">Business</span>
                     <span className="text-secondary">Design</span>
                     <span className="text-secondary">Development</span>
@@ -149,7 +185,7 @@ export default function Navbar() {
             </form>
           </div>
         </div>
-        {/* Navbar cart and button  */}
+        {/* Navbar cart and button and mobile side navbar  */}
         <div className="flex items-center gap-[35px]">
           <Link>
             <div className="relative">
@@ -174,7 +210,7 @@ export default function Navbar() {
                 {/* Mobile Hamber Icon */}
                 <label
                   htmlFor="Mobile-nav"
-                  className="text-primary sm:text-[30px] md:text-[35px] text-[25px]"
+                  className="text-primary sm:text-[30px] md:text-[35px] text-[25px] cursor-pointer"
                 >
                   <BsGrid />
                 </label>
@@ -221,7 +257,7 @@ export default function Navbar() {
                           className="flex items-center justify-between nav-link-mobile"
                         >
                           <span>Pages</span>
-                          <FiPlus className="bg-primary text-[28px] p-[4px] rounded-sm text-white" />
+                          <FiPlus className="bg-primary text-[28px] p-[4px] rounded-sm text-white cursor-pointer" />
                         </div>
                         <div
                           className={`${
@@ -292,7 +328,7 @@ export default function Navbar() {
                     aria-label="close sidebar"
                     className="absolute top-[28px] right-[10px] text-primary text-[22px]"
                   >
-                    <IoMdClose />
+                    <IoMdClose className='cursor-pointer' />
                   </label>
                 </div>
               </div>
