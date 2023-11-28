@@ -17,3 +17,11 @@ input:focus {
     padding: 0 16px;
   }
 }
+.section-title {
+    line-height: 48px;
+}
+@media screen and (max-width: 640px) {
+    .section-title {
+    line-height: 36px;
+}
+}

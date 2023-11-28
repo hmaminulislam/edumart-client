@@ -28,9 +28,6 @@ export default function Navbar() {
       e.target !== cateBtnEleIcon2.current
     ) {
       setCatOpen(false);
-      console.log("other side click");
-    } else {
-      console.log("in side click");
     }
   })
   return (

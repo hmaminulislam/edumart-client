@@ -62,7 +62,7 @@ export default function ClientSlider() {
         <div className='container-main'>
             <div className='md:py-[50px] py-[20px] sm:py-[30px]'>
             <Slider {...settings}>
-                {data.map((item)=> <div className='client-slide-item'><img className='brand-img sm:max-w-[110px] md:max-w-[150px]' src={item.img} alt="" /></div>)}
+                {data.map((item, index)=> <div key={index} className='client-slide-item'><img className='brand-img sm:max-w-[110px] md:max-w-[150px]' src={item.img} alt="" /></div>)}
             </Slider>
             </div>
         </div>

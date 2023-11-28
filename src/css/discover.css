@@ -1,3 +1,8 @@
 .discover-title {
     line-height: 48px;
 }
+@media screen and (max-width: 640px) {
+    .discover-title {
+    line-height: 36px;
+}
+}
