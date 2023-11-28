@@ -3,6 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 .hero-title {
     line-height: 42px;
@@ -20,5 +21,20 @@
 @media (min-width: 1280px) {
     .hero-title {
         line-height: 68px;
+    }
+}
+.earth-img {
+    animation: eartAnimate 3s linear infinite both;
+}
+
+@keyframes eartAnimate {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

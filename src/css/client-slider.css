@@ -1,0 +1,31 @@
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+.client-slide-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.brand-img {
+    filter: grayscale(1);
+  opacity: 0.4;
+  transition: all 0.4s ease-in;
+  max-width: 70px;
+}
+.brand-img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+@media screen and (min-width: 400px) {
+    .brand-img {
+        max-width: 90px;
+    }
+}
+@media screen and (min-width: 500px) {
+    .brand-img {
+        max-width: 100px;
+    }
+}
+

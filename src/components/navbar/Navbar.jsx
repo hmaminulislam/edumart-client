@@ -156,13 +156,13 @@ export default function Navbar() {
                 </button>
                 {catOpen ? (
                   <div ref={cateElement} className="cate-dropdown">
-                    <span className="text-secondary">Business</span>
-                    <span className="text-secondary">Design</span>
-                    <span className="text-secondary">Development</span>
-                    <span className="text-secondary">Health</span>
-                    <span className="text-secondary">Marketing</span>
-                    <span className="text-secondary">Math</span>
-                    <span className="text-secondary">Photography</span>
+                    <span className="text-secondary font-[300]">Business</span>
+                    <span className="text-secondary font-[300]">Design</span>
+                    <span className="text-secondary font-[300]">Development</span>
+                    <span className="text-secondary font-[300]">Health</span>
+                    <span className="text-secondary font-[300]">Marketing</span>
+                    <span className="text-secondary font-[300]">Math</span>
+                    <span className="text-secondary font-[300]">Photography</span>
                   </div>
                 ) : (
                   ""
@@ -215,7 +215,7 @@ export default function Navbar() {
                   <BsGrid />
                 </label>
               </div>
-              <div className="drawer-side">
+              <div className="drawer-side z-[99]">
                 <label
                   htmlFor="Mobile-nav"
                   aria-label="close sidebar"
