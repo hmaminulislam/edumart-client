@@ -3,6 +3,7 @@ import Hero from "../../components/Hero";
 import ClientSlider from "../../components/client-slider/ClientSlider";
 import Discover from "../../components/discover/Discover";
 import Featured from "../../components/featured/Featured";
+import Browse from "../../components/browse/Browse";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <ClientSlider />
       <Discover />
       <Featured />
+      <Browse/>
     </div>
   );
 }
