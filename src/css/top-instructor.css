@@ -1,0 +1,28 @@
+.instructor-img-wrap {
+    border-radius: 100px 100px 0 0;
+    display: flex;
+    justify-content: center;
+}
+.instructor-social-icons {
+    bottom: 80px;
+    right: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+.instructor-social-share-icon:hover .instructor-social-icons {
+    opacity: 1;
+    animation: socialIcons 0.7s ease-in-out 1 forwards;
+    visibility: visible;
+}
+@keyframes socialIcons {
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(1px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+        filter: blur(0);
+    }
+}
