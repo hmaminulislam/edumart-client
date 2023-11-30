@@ -5,6 +5,7 @@ import Discover from "../../components/discover/Discover";
 import Featured from "../../components/featured/Featured";
 import Browse from "../../components/browse/Browse";
 import TopInstructor from "../../components/top-instructor/TopInstructor";
+import LatestBlog from "../../components/latest-blog/LatestBlog";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <Discover />
       <Featured />
       <Browse/>
-      <TopInstructor/>
+      <TopInstructor />
+      <LatestBlog/>
     </div>
   );
 }
