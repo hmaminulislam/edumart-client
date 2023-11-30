@@ -15,7 +15,7 @@ export default function BlogCard() {
           />
         </Link>
       </div>
-      <div className="px-[35px] pb-[45px] pt-[25px]">
+      <div className="sm:px-[35px] px-[20px] pb-[45px] pt-[25px]">
         <Link>
           <h3 className="text-[22px] font-[500] text-secondary">
             What Leonardo Teach us About Web Design
