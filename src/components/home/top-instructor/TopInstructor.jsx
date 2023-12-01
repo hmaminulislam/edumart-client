@@ -1,10 +1,10 @@
 import React from "react";
-import instuctorImg1 from "../../assets/instructors/instructor01.png";
-import instuctorImg2 from "../../assets/instructors/instructor02.png";
-import instuctorImg3 from "../../assets/instructors/instructor03.png";
-import instuctorImg4 from "../../assets/instructors/instructor04.png";
-import shape from '../../assets/instructors/cta_shape01.svg'
-import "../../css/top-instructor.css";
+import instuctorImg1 from "../../../assets/instructors/instructor01.png";
+import instuctorImg2 from "../../../assets/instructors/instructor02.png";
+import instuctorImg3 from "../../../assets/instructors/instructor03.png";
+import instuctorImg4 from "../../../assets/instructors/instructor04.png";
+import shape from '../../../assets/instructors/cta_shape01.svg'
+import "../../../css/home/top-instructor.css";
 import { IoShareSocialOutline } from "react-icons/io5";
 import {
   FaFacebookF,
@@ -24,7 +24,7 @@ export default function TopInstructor() {
             <span className="text-primary py-[6px] px-[10px] bg-[#e7effc] text-[15px] rounded-[4px]">
               Our Qualified People Matter
             </span>
-            <h2 className="sm:text-[38px] text-[28px] font-[700] text-secondary section-title mt-[15px] mb-[12px]">
+            <h2 className="sm:text-[36px] text-[28px] font-[600] text-secondary section-title mt-[15px] mb-[12px]">
               Top <span className="text-primary">Class</span> Instructor
             </h2>
           </div>

@@ -7,18 +7,22 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import "../../css/footer.css";
+import "../../css/footer/footer.css";
 
 export default function Footer() {
   return (
     <div className="bg-[#061E43]">
       <div className="2xl:pt-[120px] xl:pt-[100px] md:pt-[80px] sm:pt-[60px] pt-[50px]">
         {/* footer content */}
-        <div className="container-main flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap gap-[50px] lg:gap-[15px] md:justify-between justify-center">
+        <div className="container-main flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap sm:gap-[50px] gap-[40px] lg:gap-[15px] md:justify-between justify-center">
           {/* footer item first */}
           <div className="md:w-[300px] sm:w-[44%] text-center sm:text-left">
             <Link to="/">
-              <img className="max-w-[160px] mx-auto sm:mx-0" src={LogoImg} alt="" />
+              <img
+                className="max-w-[160px] mx-auto sm:mx-0"
+                src={LogoImg}
+                alt=""
+              />
             </Link>
             <p className="text-[15px] text-white font-[300] my-[14px]">
               When an unknown printer took galley of type and scrambled it to
@@ -67,7 +71,7 @@ export default function Footer() {
           {/* footer item second  */}
           <div className="sm:w-[44%] md:w-[auto] text-center sm:text-left">
             <h4 className="text-[22px] text-white font-[500]">Resources</h4>
-            <div className="flex flex-col sm:items-start gap-[10px] mt-[25px]">
+            <div className="flex flex-col sm:items-start items-center gap-[10px] sm:mt-[25px] mt-[14px]">
               <Link className="footer-link">About</Link>
               <Link className="footer-link">Contact</Link>
               <Link className="footer-link">Shop</Link>
@@ -76,11 +80,11 @@ export default function Footer() {
             </div>
           </div>
           {/* footer item third  */}
-          <div className="sm:w-[44%] md:w-[auto] text-center sm:text-left">
+          <div className="sm:w-[44%] md:w-[125px] text-center sm:text-left">
             <h4 className="text-[22px] text-white font-[500]">Courses</h4>
-            <div className="flex flex-col sm:items-start gap-[10px] mt-[25px]">
+            <div className="flex flex-col sm:items-start items-center gap-[10px] sm:mt-[25px] mt-[14px]">
               <Link className="footer-link">Marketing</Link>
-              <Link className="footer-link">Graphic Design</Link>
+              <Link className="footer-link">Finance</Link>
               <Link className="footer-link">Design</Link>
               <Link className="footer-link">Business</Link>
               <Link className="footer-link">SEO Optimize</Link>
@@ -103,17 +107,21 @@ export default function Footer() {
             </div>
           </div>
         </div>
-              {/* footer bootom */}
-              <div className="h-[1px] w-[100%] bg-[#39557E] 2xl:mt-[120px] xl:mt-[100px] md:mt-[80px] sm:mt-[60px] mt-[50px]"></div>
+        {/* footer bootom */}
+        <div className="h-[1px] w-[100%] bg-[#39557E] 2xl:mt-[120px] xl:mt-[100px] md:mt-[80px] sm:mt-[60px] mt-[50px]"></div>
         <div className="container-main">
-                  <div className="flex flex-col md:flex-row gap-[15px] items-center justify-between py-[25px]">
-                      <span className="text-[#B2BDCD] font-[300]">Copyright © 2023 EduMart. All Rights Reserved.</span>
-                      <div className="flex items-center gap-[10px]">
-                          <Link className="text-[#B2BDCD] font-[300]">Privacy Policy</Link>
-                          <span className="h-[4px] w-[4px] bg-[#B2BDCD]"></span>
-                          <Link className="text-[#B2BDCD] font-[300]">Terms & Conditions</Link>
-                      </div>
-                  </div>
+          <div className="flex flex-col md:flex-row gap-[15px] items-center justify-between py-[25px] text-[14px] sm:text-base">
+            <span className="text-[#B2BDCD] font-[300] text-center md:text-left">
+              Copyright © 2023 EduMart. All Rights Reserved.
+            </span>
+            <div className="flex items-center gap-[10px]">
+              <Link className="text-[#B2BDCD] font-[300]">Privacy Policy</Link>
+              <span className="h-[4px] w-[4px] bg-[#B2BDCD]"></span>
+              <Link className="text-[#B2BDCD] font-[300]">
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

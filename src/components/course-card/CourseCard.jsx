@@ -5,7 +5,7 @@ import { MdAccessTime } from "react-icons/md";
 import { Link } from "react-router-dom";
 import courseImg from "../../assets/course-card/courses01.jpg";
 import authorImg from "../../assets/course-card/author_img.png";
-import '../../css/course-card.css'
+import '../../css/card/course-card.css'
 
 export default function CourseCard() {
   return (

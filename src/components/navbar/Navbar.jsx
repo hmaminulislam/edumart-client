@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LogoImg from '../../assets/navbar/logo.png';
-import '../../css/navbar.css'
+import '../../css/navbar/navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faBagShopping, faGrip, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { BsGrid } from "react-icons/bs";
@@ -64,7 +64,7 @@ export default function Navbar() {
               </div>
               <div className="page-dropdown">
                 <NavLink
-                  to="/about"
+                  to="/about-us"
                   className="text-secondary dropdown-link nav-link"
                 >
                   About Us
@@ -265,7 +265,7 @@ export default function Navbar() {
                         >
                           <div className="flex flex-col">
                             <NavLink
-                              to="/about"
+                              to="/about-us"
                               className="nav-link-mobile-drop"
                             >
                               About Us

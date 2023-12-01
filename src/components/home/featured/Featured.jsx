@@ -1,5 +1,5 @@
 import React from 'react'
-import CourseCard from '../course-card/CourseCard';
+import CourseCard from '../../course-card/CourseCard';
 
 export default function Featured() {
   return (
@@ -8,11 +8,11 @@ export default function Featured() {
         {/* top  */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-[16px]">
           {/* left  */}
-          <div className='text-center lg:text-left'>
+          <div className="text-center lg:text-left">
             <span className="text-primary py-[6px] px-[10px] bg-[#e7effc] text-[15px] rounded-[4px]">
-              100% Satisfaction Guarantee
+              Welcome our Property.
             </span>
-            <h2 className="sm:text-[38px] text-[28px] font-[700] text-secondary section-title mt-[15px] mb-[12px]">
+            <h2 className="sm:text-[36px] text-[28px] font-[600] text-secondary section-title mt-[15px] mb-[12px]">
               Our
               <span className="text-primary"> Featured</span> Courses
             </h2>
@@ -28,7 +28,9 @@ export default function Featured() {
         </div>
         {/* couse card contents */}
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] mt-[40px]">
-          {data.map((course, index)=> <CourseCard key={index} course={course} />)}
+          {data.map((course, index) => (
+            <CourseCard key={index} course={course} />
+          ))}
         </div>
       </div>
     </div>

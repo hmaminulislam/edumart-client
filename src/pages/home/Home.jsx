@@ -1,11 +1,12 @@
 import React from "react";
-import Hero from "../../components/Hero";
-import ClientSlider from "../../components/client-slider/ClientSlider";
-import Discover from "../../components/discover/Discover";
-import Featured from "../../components/featured/Featured";
-import Browse from "../../components/browse/Browse";
-import TopInstructor from "../../components/top-instructor/TopInstructor";
-import LatestBlog from "../../components/latest-blog/LatestBlog";
+import Hero from "../../components/home/hero/Hero";
+import ClientSlider from "../../components/home/client-slider/ClientSlider";
+import Discover from "../../components/home/discover/Discover";
+import Featured from "../../components/home/featured/Featured";
+import Browse from "../../components/home/browse/Browse";
+import TopInstructor from "../../components/home/top-instructor/TopInstructor";
+import LatestBlog from "../../components/home/latest-blog/LatestBlog";
+import Testimonial from "../../components/home/testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <ClientSlider />
       <Discover />
       <Featured />
-      <Browse/>
+      <Browse />
+      {/* <Testimonial/> */}
       <TopInstructor />
       <LatestBlog/>
     </div>

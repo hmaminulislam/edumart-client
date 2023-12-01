@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../css/browse.css'
+import React, { useEffect } from 'react'
+import '../../../css/home/browse.css'
 import { FaArrowRight } from 'react-icons/fa';
 import { CiEdit } from "react-icons/ci";
 import {
@@ -9,10 +9,12 @@ import {
 } from "react-icons/pi";
 import { AiOutlineBulb } from "react-icons/ai";
 import { BsBrightnessHigh } from "react-icons/bs";
-import shape from '../../assets/browse/browse.png'
-import shape2 from '../../assets/browse/browse_2.svg'
+import shape from '../../../assets/browse/browse.png'
+import shape2 from '../../../assets/browse/browse_2.svg'
+import "aos/dist/aos.css";
 
 export default function Browse() {
+  
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main flex lg:flex-row flex-col lg:items-center gap-[50px]">
@@ -21,7 +23,7 @@ export default function Browse() {
           <span className="text-primary py-[6px] px-[10px] bg-[#e7effc] text-[15px] rounded-[4px]">
             Unique online courses
           </span>
-          <h2 className="sm:text-[38px] text-[28px] font-[700] text-secondary section-title mt-[15px] mb-[12px]">
+          <h2 className="sm:text-[36px] text-[28px] font-[600] text-secondary section-title mt-[15px] mb-[12px]">
             Browse By <span className="text-primary">Categories</span>
           </h2>
           <p className="text-[15px] text-neutral font-[300] mb-[14px]">
@@ -33,11 +35,15 @@ export default function Browse() {
             All Categories <FaArrowRight />
           </button>
           <img
+            data-aos="fade-down"
+            data-aos-delay="0"
             className="absolute left-[160px] bottom-[-185px] z-[-1] max-w-[120px] hidden lg:block"
             src={shape}
             alt=""
           />
           <img
+            data-aos="fade-up"
+            data-aos-delay="80"
             className="absolute sm:right-[60px] right-0 sm:top-[-50px] top-[-20px] z-[-1] max-w-[120px]"
             src={shape2}
             alt=""

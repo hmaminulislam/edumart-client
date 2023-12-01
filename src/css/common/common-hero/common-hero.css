@@ -1,0 +1,19 @@
+.common-hero {
+  background-image: url("../../../assets/common-hero/breadcrumb_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.common-hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #031227;
+    opacity: 0.8;
+    z-index: -1;
+}

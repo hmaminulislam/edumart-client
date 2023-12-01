@@ -1,0 +1,26 @@
+.footer-link {
+    color: #B2BDCD;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in;
+}
+.footer-link::after {
+    content: "";
+    width: 0px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #1363df;
+    left: -15px;
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.footer-link:hover::after {
+    width: 12px;
+}
+.footer-link:hover {
+    padding-left: 4px;
+    transform: translateX(15px);
+    color: #1363df;
+}

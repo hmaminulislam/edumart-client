@@ -2,6 +2,7 @@ import React from 'react'
 import blogImg from '../../assets/blog-card/blog_card.jpg'
 import { CiUser, CiCalendarDate } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import '../../css/card/blog-card.css'
 
 export default function BlogCard() {
   return (
@@ -16,10 +17,8 @@ export default function BlogCard() {
         </Link>
       </div>
       <div className="sm:px-[35px] px-[20px] pb-[45px] pt-[25px]">
-        <Link>
-          <h3 className="text-[22px] font-[500] text-secondary">
-            What Leonardo Teach us About Web Design
-          </h3>
+        <Link className="text-[22px] font-[500] text-secondary blog-title-link">
+          What Leonardo Teach us About Web Design
         </Link>
         <div className="flex items-center gap-[20px] mt-[18px]">
           <div className="flex items-center gap-[4px]">
