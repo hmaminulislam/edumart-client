@@ -1,5 +1,5 @@
-.browse-item {
-    transition: all 0.4s ease-in;
+.browse-icon {
+    transition: all 0.3s ease-in;
 }
 .browse-item:hover .browse-icon{
     background-color: #1363df;

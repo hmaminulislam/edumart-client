@@ -6,7 +6,7 @@ import aboutSpape1 from "../../../assets/about-us/we-are/about_shape01.png";
 import aboutSpape2 from "../../../assets/about-us/we-are/about_shape02.png";
 import aboutSpape3 from "../../../assets/about-us/we-are/about_shape03.png";
 import { FaArrowRight } from "react-icons/fa";
-import '../../../css/about-us/we-are/we-are.css'
+import '../../../css/about-us/we-are.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -28,11 +28,11 @@ export default function WeAre() {
           </h2>
           <p className="text-[15px] text-secondary font-[400] mb-[14px]">
             Borem ipsum dolor sit amet, consectetur adipiscing eliawe ellus
-            luctus nec ullamcorper mattisBorem
+            luctus nec ullamcorper mattis.
           </p>
           <p className="text-[15px] text-neutral font-[300] mb-[14px]">
             Borem ipsum dolor sit amet, consectetur adipiscing eliawe awut elit
-            ellus, luctus nec ullamcorper mattisBorem ipsum dolor awes atnse
+            ellus, luctus nec ullamcorper mattis. Borem ipsum dolor awes atnse
             awctetur.
           </p>
           <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
@@ -63,7 +63,7 @@ export default function WeAre() {
             alt=""
           />
           <img
-            className="absolute 2xl:right-[-30px] xl:right-[-10px] right-[-3px] lg:bottom-[-45px] bottom-[-30px] 2xl:w-[130px] md:w-[80px] w-[70px] z-[-1] we-are-shape-start"
+            className="absolute 2xl:right-[-30px] xl:right-[-5px] right-[-3px] lg:bottom-[-45px] bottom-[-30px] 2xl:w-[130px] md:w-[80px] w-[70px] z-[-1] we-are-shape-start"
             src={aboutSpape3}
             alt=""
           />
