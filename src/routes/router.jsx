@@ -6,6 +6,9 @@ import Contact from "../pages/contact/Contact";
 import Shop from "../pages/shop/Shop";
 import ErrorPage from "../pages/404/ErrorPage";
 import Faq from "../pages/faq/Faq";
+import AllEvents from "../pages/our-events/OurEvents";
+import OurInstructors from "../pages/our-instructors/OurInstructors";
+import Courses from "../pages/courses/Courses";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
             {
                 path: '/faq',
                 element: <Faq/>
+            },
+            {
+                path: '/our-events',
+                element: <AllEvents/>
+            },
+            {
+                path: '/our-instructors',
+                element: <OurInstructors/>
+            },
+            {
+                path: '/courses',
+                element: <Courses/>
             },
         ]
 }

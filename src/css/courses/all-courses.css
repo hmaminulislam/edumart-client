@@ -1,0 +1,22 @@
+.all-course-search-field::placeholder {
+    font-weight: 300;
+    margin-right: 20px;
+}
+.sort-items {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #EFF1F7;
+    width: 100%;
+    z-index: 99;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.sort-item {
+    padding: 8px 20px;
+    transition: all 0.3s ease-in;
+}
+.sort-item:hover {
+    background-color: #EFF1F7;
+}
