@@ -8,12 +8,12 @@ import shape3 from '../../../assets/about-us/offer/cta_shape003.svg'
 export default function Offer() {
   return (
     <div className="offer 2xl:py-[160px] xl:py-[130px] md:py-[110px] sm:py-[90px] py-[80px]">
-      <div className="container-main flex flex-col gap-[12px] items-center justify-center text-center">
+      <div className="container-main flex flex-col sm:gap-[12px] gap-[8px] items-center justify-center text-center">
         <p className="text-white">ARE YOU READY FOR THIS OFFER</p>
-        <h2 className="lg:text-[48px] md:text-[42px] sm:text-[38px] text-[34px] font-[600] text-white">
+        <h2 className="lg:text-[48px] md:text-[42px] sm:text-[34px] text-[28px] font-[600] text-white">
           50% Offer For Very First 50
         </h2>
-        <h5 className="sm:text-[25px] text-[22px] font-[500] text-white mb-[12px]">
+        <h5 className="sm:text-[25px] text-[20px] font-[500] text-white mb-[12px]">
           Student’s & Mentors
         </h5>
         <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">

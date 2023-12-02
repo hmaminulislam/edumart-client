@@ -15,7 +15,7 @@ export default function TopInstructor() {
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
         {/* top  */}
-        <div className="flex flex-col md:flex-row md:items-center gap-[30px] justify-between">
+        <div className="flex flex-col md:flex-row md:items-center sm:gap-[30px] justify-between">
           <div>
             <span className="text-primary py-[6px] px-[10px] bg-[#e7effc] text-[15px] rounded-[4px]">
               Our Qualified People Matter

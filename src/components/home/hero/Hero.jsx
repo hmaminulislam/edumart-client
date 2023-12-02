@@ -99,7 +99,7 @@ export default function Hero() {
             <CountUp
               start={1}
               end={15}
-              delay={0}
+              delay={2}
               duration={4}
               enableScrollSpy={true}
             >
@@ -118,7 +118,7 @@ export default function Hero() {
             <CountUp
               start={1}
               end={32}
-              delay={0}
+              delay={2}
               duration={4}
               enableScrollSpy={true}
             >

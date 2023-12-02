@@ -21,11 +21,14 @@ export default function Grow() {
           </h2>
         </div>
         {/* content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-[30px] gap-[25px] mt-[40px]">
           {/* item  */}
           {data.map((item, index) => (
-            <div key={index} className='text-center bg-white rounded-[6px] py-[50px] px-[20px] mt-[40px]'>
-              <img className='max-w-[70px] mx-auto' src={item.icon} alt="" />
+            <div
+              key={index}
+              className="text-center bg-white rounded-[6px] py-[50px] px-[20px]"
+            >
+              <img className="max-w-[70px] mx-auto" src={item.icon} alt="" />
               <CountUp
                 start={1}
                 end={item.number}
@@ -34,10 +37,13 @@ export default function Grow() {
                 enableScrollSpy={true}
               >
                 {({ countUpRef }) => (
-                <span className='text-[28px] font-[700] text-primary mt-[14px] mb-[5px] inline-block' ref={countUpRef} />
+                  <span
+                    className="text-[28px] font-[700] text-primary mt-[14px] mb-[5px] inline-block"
+                    ref={countUpRef}
+                  />
                 )}
-                  </CountUp>
-                  <p className='text-neutral font-[300]'>{item.taq}</p>
+              </CountUp>
+              <p className="text-neutral font-[300]">{item.taq}</p>
             </div>
           ))}
         </div>

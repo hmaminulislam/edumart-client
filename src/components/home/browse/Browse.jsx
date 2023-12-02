@@ -36,14 +36,14 @@ export default function Browse() {
           </button>
           <img
             data-aos="fade-down"
-            data-aos-delay="0"
+            data-aos-delay="200"
             className="absolute left-[160px] bottom-[-185px] z-[-1] max-w-[120px] hidden lg:block"
             src={shape}
             alt=""
           />
           <img
             data-aos="fade-up"
-            data-aos-delay="80"
+            data-aos-delay="300"
             className="absolute sm:right-[60px] right-0 sm:top-[-50px] top-[-20px] z-[-1] max-w-[120px]"
             src={shape2}
             alt=""
