@@ -11,11 +11,9 @@ import sponserLogo3 from "../../assets/home/client-slider/brand03.png";
 import sponserLogo4 from "../../assets/home/client-slider/brand04.png";
 import sponserLogo5 from "../../assets/home/client-slider/brand05.png";
 import sponserLogo6 from "../../assets/home/client-slider/brand06.png";
-import { useParams } from "react-router-dom";
 
 export default function EventContent() {
-  const params = useParams()
-  console.log(params)
+  
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main flex flex-col md:flex-row gap-[40px]">

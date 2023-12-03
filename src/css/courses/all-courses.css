@@ -15,8 +15,8 @@
 }
 .sort-item {
     padding: 8px 20px;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
 }
 .sort-item:hover {
-    background-color: #EFF1F7;
+    background-color: #d7e1ff;
 }

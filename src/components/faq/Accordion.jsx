@@ -1,14 +1,58 @@
-import React from "react";
-import AccordionItem from "./AccordionItem";
+import React, { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa6";
+
+const AccordionSection = ({
+  item,
+  isActiveAccordion,
+  setActiveIndex,
+  sectionIndex,
+}) => {
+  const toggleAccordion = () => {
+    const nextIndex = isActiveAccordion ? null : sectionIndex;
+    setActiveIndex(nextIndex);
+  };
+  return (
+    <div onClick={toggleAccordion}>
+      <div
+        className={`flex items-center justify-between gap-[10px] py-[20px] sm:px-[30px] px-[14px] ${
+          isActiveAccordion
+            ? "bg-primary text-white"
+            : "bg-[#E6F2FF] text-secondary cursor-pointer"
+        }`}
+      >
+        <h4 className="sm:w-[90%] w-[88%] sm:text-[22px] text-[16px] sm:font-[500] font-[400]">{item.ques}</h4>
+        {isActiveAccordion ? (
+          <FaMinus className="w-[35px] h-[35px] flex items-center justify-center text-primary p-[8px] bg-white rounded-full" />
+        ) : (
+          <FaPlus className={`w-[35px] h-[35px] flex items-center justify-center rounded-full p-[8px] ${isActiveAccordion ? 'bg-white text-primary' : 'bg-secondary text-white'} `} />
+        )}
+      </div>
+
+      {isActiveAccordion && (
+        <p className="text-neutral font-[300] py-[20px] px-[30px] bg-[#E6F2FF]">
+          {item.ans}
+        </p>
+      )}
+    </div>
+  );
+};
 
 export default function Accordion() {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
         {/* faq item  */}
         <div className="flex flex-col gap-[5px] max-w-[900px] mx-auto">
           {data.map((item, index) => (
-              <AccordionItem item={item} key={index} />
+            <div key={index}>
+              <AccordionSection
+                item={item}
+                isActiveAccordion={index === activeIndex}
+                setActiveIndex={setActiveIndex}
+                sectionIndex={index}
+              />
+            </div>
           ))}
         </div>
       </div>

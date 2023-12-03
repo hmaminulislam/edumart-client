@@ -8,15 +8,13 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 export default function AllCourses() {
   const [sortOpen, setSortOpen] = useState(false);
   const sortBtn = useRef();
-  const sortBtnEleIcon2 = useRef();
-  const sortBtnEleIcon3 = useRef();
+  // const sortBtnEleIcon2 = useRef();
   const sortElement = useRef();
   window.addEventListener("click", (e) => {
     if (
       e.target !== sortBtn.current &&
-      e.target !== sortElement.current &&
-      e.target !== sortBtnEleIcon3.current &&
-      e.target !== sortBtnEleIcon2.current
+      e.target !== sortElement.current
+      // e.target !== sortBtnEleIcon2.current
     ) {
       setSortOpen(false);
     }
@@ -49,32 +47,31 @@ export default function AllCourses() {
 
                 {sortOpen ? (
                   <FaChevronUp
-                    onClick={() => setSortOpen(!sortOpen)}
-                    ref={sortBtnEleIcon3}
+                    onClick={() => setSortOpen(false)}
                     className="text-[14px] mt-[3px]"
                   />
                 ) : (
                   <FaChevronDown
-                    onClick={() => setSortOpen(!sortOpen)}
-                    ref={sortBtnEleIcon2}
+                    // onClick={() => setSortOpen(true)}
+                    // ref={sortBtnEleIcon2}
                     className="text-[14px] mt-[3px]"
                   />
                 )}
               </button>
               {sortOpen && <div ref={sortElement} className="sort-items">
-                  <span className="text-secondary font-[300] sort-item">
+                  <span className="text-secondary text-[14px] sort-item">
                     Oldest
                   </span>
-                  <span className="text-secondary font-[300] sort-item">
+                  <span className="text-secondary text-[14px] sort-item">
                     Price High To Low
                   </span>
-                  <span className="text-secondary font-[300] sort-item">
+                  <span className="text-secondary text-[14px] sort-item">
                     Price Low To High
                   </span>
-                  <span className="text-secondary font-[300] sort-item">
+                  <span className="text-secondary text-[14px] sort-item">
                     Course Title (A-Z)
                   </span>
-                  <span className="text-secondary font-[300] sort-item">
+                  <span className="text-secondary text-[14px] sort-item">
                     Course Title (Z-A)
                   </span>
                 </div>}
