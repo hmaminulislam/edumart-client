@@ -72,11 +72,24 @@ export default function Footer() {
           <div className="sm:w-[44%] md:w-[auto] text-center sm:text-left">
             <h4 className="text-[22px] text-white font-[500]">Resources</h4>
             <div className="flex flex-col sm:items-start items-center gap-[10px] sm:mt-[25px] mt-[14px]">
-              <Link to="/about-us" className="footer-link">About</Link>
-              <Link to="/contact" className="footer-link">Contact</Link>
-              <Link to="/shop" className="footer-link">Shop</Link>
-              <Link to="/blog" className="footer-link">Blog</Link>
-              <Link to="/our-events" className="footer-link">Events</Link>
+              <Link
+                to="/about-us"
+                className="footer-link"
+              >
+                About
+              </Link>
+              <Link to="/contact" className="footer-link">
+                Contact
+              </Link>
+              <Link to="/shop" className="footer-link">
+                Shop
+              </Link>
+              <Link to="/blog" className="footer-link">
+                Blog
+              </Link>
+              <Link to="/our-events" className="footer-link">
+                Events
+              </Link>
             </div>
           </div>
           {/* footer item third  */}

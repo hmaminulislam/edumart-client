@@ -50,7 +50,7 @@ const router = createBrowserRouter([
                 element: <Courses/>
             },
             {
-                path: '/our-events/:id',
+                path: '/our-events/:name',
                 element: <EventDetails />
             },
         ]

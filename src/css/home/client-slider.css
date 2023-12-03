@@ -17,6 +17,9 @@
     filter: grayscale(0);
     opacity: 1;
 }
+.slick-slide div {
+    outline: none !important
+}
 
 @media screen and (min-width: 400px) {
     .brand-img {

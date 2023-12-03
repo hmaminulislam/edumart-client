@@ -72,21 +72,21 @@ export default function Hero() {
           <img className="mx-auto" src={HeroImg} alt="" />
           <img
             data-aos="fade-down-right"
-            data-aos-delay="200"
+            data-aos-delay="300"
             className="absolute sm:max-w-[65px] max-w-[40px] sm:top-[85px] top-0 lg:left-[105px] md:left-[230px] sm:left-[200px] left-[60px]"
             src={shapeImg3}
             alt=""
           />
           <img
             data-aos="fade-right"
-            data-aos-delay="200"
+            data-aos-delay="300"
             className="absolute sm:max-w-[85px] max-w-[55px] sm:bottom-[140px] bottom-[75px] lg:left-[-80px] sm:left-[10px] left-[-36px]"
             src={shapeImg4}
             alt=""
           />
           <img
             data-aos="fade-down-left"
-            data-aos-delay="200"
+            data-aos-delay="300"
             className="absolute sm:max-w-[55px] max-w-[35px] top-[60px] lg:right-[20px] md:right-[170px] sm:right-[115px] right-[10px]"
             src={shapeImg5}
             alt=""

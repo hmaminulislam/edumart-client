@@ -1,11 +1,11 @@
 import React from 'react'
-import brandImg1 from '../../../assets/client-slider/brand01.png'
-import brandImg2 from '../../../assets/client-slider/brand02.png'
-import brandImg3 from '../../../assets/client-slider/brand03.png'
-import brandImg4 from '../../../assets/client-slider/brand04.png'
-import brandImg5 from '../../../assets/client-slider/brand05.png'
-import brandImg6 from '../../../assets/client-slider/brand06.png'
-import brandImg7 from '../../../assets/client-slider/brand07.png'
+import brandImg1 from '../../../assets/home/client-slider/brand01.png'
+import brandImg2 from '../../../assets/home/client-slider/brand02.png'
+import brandImg3 from '../../../assets/home/client-slider/brand03.png'
+import brandImg4 from '../../../assets/home/client-slider/brand04.png'
+import brandImg5 from '../../../assets/home/client-slider/brand05.png'
+import brandImg6 from '../../../assets/home/client-slider/brand06.png'
+import brandImg7 from '../../../assets/home/client-slider/brand07.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
