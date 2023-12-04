@@ -155,11 +155,15 @@ export default function Navbar() {
                   <div ref={cateElement} className="cate-dropdown">
                     <span className="text-secondary font-[300]">Business</span>
                     <span className="text-secondary font-[300]">Design</span>
-                    <span className="text-secondary font-[300]">Development</span>
+                    <span className="text-secondary font-[300]">
+                      Development
+                    </span>
                     <span className="text-secondary font-[300]">Health</span>
                     <span className="text-secondary font-[300]">Marketing</span>
                     <span className="text-secondary font-[300]">Math</span>
-                    <span className="text-secondary font-[300]">Photography</span>
+                    <span className="text-secondary font-[300]">
+                      Photography
+                    </span>
                   </div>
                 ) : (
                   ""
@@ -325,7 +329,7 @@ export default function Navbar() {
                     aria-label="close sidebar"
                     className="absolute top-[28px] right-[10px] text-primary text-[22px]"
                   >
-                    <IoMdClose className='cursor-pointer' />
+                    <IoMdClose className="cursor-pointer" />
                   </label>
                 </div>
               </div>
