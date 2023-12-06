@@ -1,12 +1,12 @@
 import React from 'react'
-import blogImg from '../../assets/blog-card/blog_card.jpg'
+import blogImg from '../../../assets/blog-card/blog_card.jpg'
 import { CiUser, CiCalendarDate } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-import '../../css/card/blog-card.css'
+import "../../../css/card/blog-card.css";
 
 export default function BlogCard() {
   return (
-    <div className="bg-white rounded-[8px]">
+    <div className="bg-white rounded-[8px] border border-[#eee]">
       <div>
         <Link>
           <img

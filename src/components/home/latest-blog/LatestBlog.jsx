@@ -1,5 +1,5 @@
 import React from "react";
-import BlogCard from "../../blog-card/BlogCard";
+import BlogCard from "../../cards/blog-card/BlogCard";
 
 export default function LatestBlog() {
   return (

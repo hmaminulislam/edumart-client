@@ -769,7 +769,7 @@ export default function AllCourses() {
               ))}
             </div>
           ) : (
-            <div className="lg:w-[75%] md:w-[72%] flex flex-col gap-[30px]">
+            <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-[25px] lg:gap-[30px]">
               {data.map((course) => (
                 <CourseCardLarge />
               ))}

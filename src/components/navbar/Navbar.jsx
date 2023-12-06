@@ -89,12 +89,6 @@ export default function Navbar() {
                   Our Instructors
                 </NavLink>
                 <NavLink
-                  to="/our-mentors"
-                  className="text-secondary dropdown-link nav-link"
-                >
-                  Our Mentors
-                </NavLink>
-                <NavLink
                   to="/our-events"
                   className="text-secondary dropdown-link nav-link"
                 >
@@ -292,12 +286,6 @@ export default function Navbar() {
                               className="nav-link-mobile-drop"
                             >
                               Our Instructors
-                            </NavLink>
-                            <NavLink
-                              to="/our-mentors"
-                              className="nav-link-mobile-drop"
-                            >
-                              Our Mentors
                             </NavLink>
                             <NavLink
                               to="/our-events"

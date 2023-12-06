@@ -10,6 +10,7 @@ import AllEvents from "../pages/our-events/OurEvents";
 import OurInstructors from "../pages/our-instructors/OurInstructors";
 import Courses from "../pages/courses/Courses";
 import EventDetails from "../pages/event-details/EventDetails";
+import Blog from "../pages/blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: '/our-events/:name',
                 element: <EventDetails />
+            },
+            {
+                path: '/blog',
+                element: <Blog />
             },
         ]
 }

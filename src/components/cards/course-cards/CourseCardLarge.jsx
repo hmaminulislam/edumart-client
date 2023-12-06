@@ -8,18 +8,18 @@ import { TiStarFullOutline } from "react-icons/ti";
 
 export default function CourseCardLarge() {
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-[30px] p-[14px] border border-[#E8E8E8] rounded-[6px]">
-      <div className="sm:w-[35%]">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-[30px] p-[5px] lg:p-[14px] border border-[#E8E8E8] rounded-[6px]">
+      <div className="lg:w-[35%]">
         <img className="rounded-[5px]" src={courseImg} alt="" />
       </div>
-      <div className="sm:w-[65%]">
+      <div className="lg:w-[65%] px-[5px] lg:px-0">
         <span className="py-[4px] px-[10px] text-[14px] bg-[#E8F9EF] rounded-full">
           Marketing
         </span>
-        <Link className="sm:text-[24px] text-[17px] text-secondary font-[500] block mt-[14px]">
+        <Link className="lg:text-[24px] text-[17px] text-secondary font-[500] block mt-[14px]">
           Bigener Adobe Illustrator for Graphic Design
         </Link>
-        <div className="flex items-center gap-[14px] my-[14px]">
+        <div className="flex items-center flex-wrap gap-[14px] my-[14px]">
           <div className="flex items-center gap-[4px] sm:gap-[6px]">
             <FiFileText className="text-[16px]" />
             <span className="sm:text-[14px] text-[12px] font-[300]">6</span>
