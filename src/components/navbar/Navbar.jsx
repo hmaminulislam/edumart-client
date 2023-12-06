@@ -1,25 +1,38 @@
-import React, { useRef, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import LogoImg from '../../assets/navbar/logo.png';
-import '../../css/navbar/navbar.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faBagShopping, faGrip, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import React, { useRef, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import LogoImg from "../../assets/navbar/logo.png";
+import "../../css/navbar/navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleDown,
+  faBagShopping,
+  faGrip,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import { BsGrid } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
-import { FaFacebookF, FaLinkedinIn, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaTelegramPlane,
+  FaTwitter,
+} from "react-icons/fa";
 import { RiInstagramLine } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 
 export default function Navbar() {
-    const [catOpen, setCatOpen] = useState(false)
-  const [dropMenu, setDropMenu] = useState(false)
-  const cateBtn = useRef()
-  const cateBtnEleIcon1 = useRef()
-  const cateBtnEleIcon2 = useRef()
-  const cateBtnEle = useRef()
-  const cateElement = useRef()
-    // category menu close other side click 
-  window.addEventListener('click', (e) => {
+  const [catOpen, setCatOpen] = useState(false);
+  const [dropMenu, setDropMenu] = useState(false);
+
+  // element select for useref
+  const cateBtn = useRef();
+  const cateBtnEleIcon1 = useRef();
+  const cateBtnEleIcon2 = useRef();
+  const cateBtnEle = useRef();
+  const cateElement = useRef();
+
+  // category menu close other side click
+  window.addEventListener("click", (e) => {
     if (
       e.target !== cateBtn.current &&
       e.target !== cateElement.current &&
@@ -29,7 +42,7 @@ export default function Navbar() {
     ) {
       setCatOpen(false);
     }
-  })
+  });
   return (
     <div className="max-w-[1660px] h-[90px] mx-auto px-[16px] sm:px-5 flex items-center justify-between">
       {/* Navbar Left  */}
