@@ -9,6 +9,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import InstructorCard from "../../cards/instructor-card/InstructorCard";
+import { Link } from "react-router-dom";
 
 export default function TopInstructor() {
   return (
@@ -25,9 +26,11 @@ export default function TopInstructor() {
             </h2>
           </div>
           <div>
-            <button className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-[13px] sm:px-[32px] px-[24px] rounded-[6px] hover:bg-primary hover:text-white transition duration-300">
-              All Instructors <FaArrowRight />
-            </button>
+            <Link to="/our-instructors">
+              <button className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-[13px] sm:px-[32px] px-[24px] rounded-[6px] hover:bg-primary hover:text-white transition duration-300">
+                All Instructors <FaArrowRight />
+              </button>
+            </Link>
           </div>
         </div>
         {/* instructors content  */}
@@ -49,7 +52,11 @@ export default function TopInstructor() {
           <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px]">
             Become an Instructor <FaArrowRight />
           </button>
-          <img className="absolute top-[-20px] left-[20px]" src={shape} alt="" />
+          <img
+            className="absolute top-[-20px] left-[20px]"
+            src={shape}
+            alt=""
+          />
         </div>
       </div>
     </div>

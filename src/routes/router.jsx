@@ -11,55 +11,60 @@ import OurInstructors from "../pages/our-instructors/OurInstructors";
 import Courses from "../pages/courses/Courses";
 import EventDetails from "../pages/event-details/EventDetails";
 import Blog from "../pages/blog/Blog";
+import BlogDetails from "../pages/blog-details/BlogDetails";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: "/",
-        element: <Main />,
-        errorElement: <ErrorPage/>,
-        children: [
-            {
-                path: '/',
-                element: <Home/>
-            },
-            {
-                path: '/about-us',
-                element: <About/>
-            },
-            {
-                path: '/contact',
-                element: <Contact/>
-            },
-            {
-                path: '/shop',
-                element: <Shop/>
-            },
-            {
-                path: '/faq',
-                element: <Faq/>
-            },
-            {
-                path: '/our-events',
-                element: <AllEvents/>
-            },
-            {
-                path: '/our-instructors',
-                element: <OurInstructors/>
-            },
-            {
-                path: '/courses',
-                element: <Courses/>
-            },
-            {
-                path: '/our-events/:name',
-                element: <EventDetails />
-            },
-            {
-                path: '/blog',
-                element: <Blog />
-            },
-        ]
-}
-])
+        element: <Home />,
+      },
+      {
+        path: "/about-us",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+      {
+        path: "/our-events",
+        element: <AllEvents />,
+      },
+      {
+        path: "/our-instructors",
+        element: <OurInstructors />,
+      },
+      {
+        path: "/courses",
+        element: <Courses />,
+      },
+      {
+        path: "/our-events/:name",
+        element: <EventDetails />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/blog/:name",
+        element: <BlogDetails />,
+      },
+    ],
+  },
+]);
 
 export default router;

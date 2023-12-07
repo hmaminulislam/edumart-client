@@ -19,6 +19,7 @@ import {
 } from "react-icons/fa";
 import { RiInstagramLine } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 export default function Navbar() {
   const [catOpen, setCatOpen] = useState(false);
@@ -160,15 +161,25 @@ export default function Navbar() {
                 </button>
                 {catOpen ? (
                   <div ref={cateElement} className="cate-dropdown">
-                    <span className="text-secondary font-[300]">Business</span>
-                    <span className="text-secondary font-[300]">Design</span>
-                    <span className="text-secondary font-[300]">
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
+                      Business
+                    </span>
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
+                      Design
+                    </span>
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
                       Development
                     </span>
-                    <span className="text-secondary font-[300]">Health</span>
-                    <span className="text-secondary font-[300]">Marketing</span>
-                    <span className="text-secondary font-[300]">Math</span>
-                    <span className="text-secondary font-[300]">
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
+                      Health
+                    </span>
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
+                      Marketing
+                    </span>
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
+                      Math
+                    </span>
+                    <span className="text-secondary font-[300] cursor-pointer py-[6px] px-[8px] hover:bg-[#D7E1FF] transition duration-300">
                       Photography
                     </span>
                   </div>
@@ -197,7 +208,7 @@ export default function Navbar() {
         <div className="flex items-center gap-[35px]">
           <Link>
             <div className="relative">
-              <FontAwesomeIcon
+              <HiOutlineShoppingBag
                 className="text-[26px] text-secondary"
                 icon={faBagShopping}
               />

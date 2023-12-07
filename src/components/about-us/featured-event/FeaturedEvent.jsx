@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa';
 import EventCard from '../../cards/event-card/EventCard';
+import { Link } from 'react-router-dom';
 
 export default function FeaturedEvent() {
   return (
@@ -17,9 +18,11 @@ export default function FeaturedEvent() {
             </h2>
           </div>
           <div>
-            <button className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-[13px] sm:px-[32px] px-[24px] rounded-[6px] hover:bg-primary hover:text-white transition duration-300">
-              Our All Events <FaArrowRight />
-            </button>
+            <Link to='/our-events'>
+              <button className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-[13px] sm:px-[32px] px-[24px] rounded-[6px] hover:bg-primary hover:text-white transition duration-300">
+                Our All Events <FaArrowRight />
+              </button>
+            </Link>
           </div>
         </div>
         {/* event content */}

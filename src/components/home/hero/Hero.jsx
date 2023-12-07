@@ -11,6 +11,7 @@ import shapeImg5 from '../../../assets/hero/bshape_05.png'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CountUp from "react-countup";
+import { Link } from 'react-router-dom';
 
 
 export default function Hero() {
@@ -45,9 +46,9 @@ export default function Hero() {
             data-aos-delay="300"
             className="flex flex-col lg:flex-row items-center gap-[12px] lg:gap-[20px] mt-[18px] lg:mt-[30px]"
           >
-            <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
+            <Link to='/courses' className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
               Explore Courses <FaArrowRight />
-            </button>
+            </Link>
             <div className="flex items-center gap-[12px]">
               <PiPhoneCallLight className="text-[45px] text-primary" />
               <div className="flex flex-col">

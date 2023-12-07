@@ -1,6 +1,6 @@
 import React from "react";
 import courseImg from "../../../assets/courses/courses10.jpg";
-import instructorImg from "../../../assets/instructors/instructor04.png";
+import instructorImg from "../../../assets/course-card/author_img.png";
 import { Link } from "react-router-dom";
 import { FiFileText, FiUsers } from "react-icons/fi";
 import { MdAccessTime } from "react-icons/md";

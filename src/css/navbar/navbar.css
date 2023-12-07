@@ -38,7 +38,6 @@
 .cate-dropdown {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     position: absolute;
     top: 42px;
     left: -1px;
@@ -47,7 +46,6 @@
     border-left: 1px solid #d0dae9;
     border-right: 1px solid #d0dae9;
     border-radius: 4px;
-    padding: 8px 14px;
     width: 101%;
     z-index: 99;
 }

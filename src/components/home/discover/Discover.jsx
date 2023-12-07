@@ -8,6 +8,7 @@ import aboutImg from '../../../assets/discover/about_img01.png';
 import aboutImg2 from '../../../assets/discover/about_img02.png';
 import shpae from '../../../assets/discover/about_dots.svg';
 import CountUp from "react-countup";
+import { Link } from 'react-router-dom';
 
 export default function Discover() {
   return (
@@ -160,9 +161,11 @@ export default function Discover() {
               </div>
             </div>
           </div>
-          <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
-            Discover More <FaArrowRight />
-          </button>
+          <Link to="/about-us">
+            <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
+              Discover More <FaArrowRight />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

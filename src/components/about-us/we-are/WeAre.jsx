@@ -9,6 +9,7 @@ import { FaArrowRight } from "react-icons/fa";
 import '../../../css/about-us/we-are.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from 'react-router-dom';
 
 export default function WeAre() {
     useEffect(() => {
@@ -35,9 +36,11 @@ export default function WeAre() {
             ellus, luctus nec ullamcorper mattis. Borem ipsum dolor awes atnse
             awctetur.
           </p>
-          <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
-            Explore Courses <FaArrowRight />
-          </button>
+          <Link to="/courses">
+            <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
+              Explore Courses <FaArrowRight />
+            </button>
+          </Link>
         </div>
         {/* right */}
         <div className="md:w-[55%] flex items-center lg:gap-[35px] gap-[20px] relative">

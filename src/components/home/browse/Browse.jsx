@@ -12,6 +12,7 @@ import { BsBrightnessHigh } from "react-icons/bs";
 import shape from '../../../assets/browse/browse.png'
 import shape2 from '../../../assets/browse/browse_2.svg'
 import "aos/dist/aos.css";
+import { Link } from 'react-router-dom';
 
 export default function Browse() {
   
@@ -31,9 +32,11 @@ export default function Browse() {
             ellus, luctus nec ullamcorper mattisBorem ipsum dolor awes atnse
             awctetur.
           </p>
-          <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
-            All Categories <FaArrowRight />
-          </button>
+          <Link to="/courses">
+            <button className="flex items-center justify-center gap-2 bg-primary text-white py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary transition duration-300">
+              All Categories <FaArrowRight />
+            </button>
+          </Link>
           <img
             data-aos="fade-down"
             data-aos-delay="200"

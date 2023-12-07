@@ -4,13 +4,23 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 import { FaChevronRight } from "react-icons/fa";
 
 export default function CommonHero({ pageName }) {
+  // dynamic breadcamb 
   const params = useParams()
   const location = useLocation()
   const prevPathname = location.state?.prevUrl;
   const exceptSlish = prevPathname?.split("/")
   const nameWithHipen = exceptSlish && exceptSlish[1]
   const nameDivided = nameWithHipen?.split('-')
-  const name = nameDivided && `${nameDivided[0]} ${nameDivided[1]}`
+  
+  let name = "";
+
+  if (nameDivided?.length === 2) {
+    name = `${nameDivided[0]} ${nameDivided[1]}`;
+  } else {
+    if (nameDivided?.length) {
+      name = `${nameDivided[0]}`;
+    }
+  }
     
   return (
     <div className="common-hero lg:pt-[150px] lg:pb-[155px] md:pt-[120px] md:pb-[125px] pt-[100px] pb-[105px]">
