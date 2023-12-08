@@ -12,6 +12,7 @@ import Courses from "../pages/courses/Courses";
 import EventDetails from "../pages/event-details/EventDetails";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog-details/BlogDetails";
+import CourseDetails from "../pages/course-details/CourseDetails";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/blog/:name",
         element: <BlogDetails />,
+      },
+      {
+        path: "/course/:name",
+        element: <CourseDetails />,
       },
     ],
   },

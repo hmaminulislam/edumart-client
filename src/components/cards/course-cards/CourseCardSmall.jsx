@@ -10,7 +10,9 @@ export default function CourseCardSmall() {
   return (
     <div className="p-[10px] border border-[#E8E8E8] rounded-[6px]">
       <div className="relative">
+        <Link to={`/course/${"name"}`}>
         <img className="rounded-[4px]" src={courseImg} alt="" />
+        </Link>
         <img
           className="absolute right-[15px] bottom-[-25px] h-[60px] w-[60px] border-[4px] border-white rounded-full"
           src={instructorImg}
@@ -21,7 +23,10 @@ export default function CourseCardSmall() {
         <span className="py-[4px] px-[10px] text-[14px] bg-[#E8F9EF] rounded-full">
           Marketing
         </span>
-        <Link className="text-[17px] text-secondary font-[500] block mt-[14px]">
+        <Link
+          to={`/course/${"name"}`}
+          className="text-[17px] text-secondary font-[500] block mt-[14px]"
+        >
           Bigener Adobe Illustrator for Graphic Design
         </Link>
         <div className="flex items-center gap-[14px] my-[14px]">
