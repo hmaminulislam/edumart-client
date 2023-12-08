@@ -12,12 +12,13 @@ const AccordionSection = ({
     setActiveIndex(nextIndex);
   };
   return (
-    <div onClick={toggleAccordion} className="">
+    <div>
       <div
-        className={`flex items-center justify-between gap-[10px] py-[20px] sm:px-[30px] px-[14px] border border-[#e0e2ea] rounded-t-[6px] ${
+        onClick={toggleAccordion}
+        className={`flex items-center justify-between gap-[10px] py-[20px] sm:px-[30px] px-[14px] border border-[#e0e2ea] cursor-pointer ${
           isActiveAccordion
-            ? "bg-[#EFF1F6] text-primary"
-            : "bg-white text-secondary cursor-pointer"
+            ? "bg-[#EFF1F6] text-primary rounded-t-[6px]"
+            : "bg-white text-secondary rounded-[6px]"
         }`}
       >
         <h4 className="sm:w-[90%] w-[88%] sm:text-[20px] text-[16px] sm:font-[500] font-[400]">

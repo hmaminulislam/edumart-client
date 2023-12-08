@@ -26,7 +26,7 @@ export default function Instructors() {
               <h4 className="text-[22px] font-[600] text-white mb-[20px]">
                 Best Instructors From Around The World
               </h4>
-              <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px]">
+              <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary hover:text-white transition duration-300">
                 Register Now <FaArrowRight />
               </button>
             </div>
@@ -34,9 +34,9 @@ export default function Instructors() {
           <div className="instructor-cta-item-2 md:w-[50%] w-full py-[80px] md:px-[40px] px-[20px] rounded-[12px]">
             <div className="max-w-[300px]">
               <h4 className="text-[22px] font-[600] text-white mb-[20px]">
-              Get Unlimited Access To 6,000+ Of Courses
+                Get Unlimited Access To 6,000+ Of Courses
               </h4>
-              <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px]">
+              <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary hover:text-white transition duration-300">
                 Discover Now <FaArrowRight />
               </button>
             </div>

@@ -13,12 +13,14 @@ export default function CourseCardLarge() {
         <img className="rounded-[5px]" src={courseImg} alt="" />
       </Link>
       <div className="lg:w-[65%] px-[5px] lg:px-0">
-        <span className="py-[4px] px-[10px] text-[14px] bg-[#E8F9EF] rounded-full">
-          Marketing
-        </span>
+        <div className="mb-[10px]">
+          <span className="py-[4px] px-[10px] text-[14px] bg-[#E8F9EF] inline-block rounded-full">
+            Marketing
+          </span>
+        </div>
         <Link
           to={`/course/${"name"}`}
-          className="lg:text-[24px] text-[17px] text-secondary font-[500] block mt-[14px]"
+          className="lg:text-[24px] text-[17px] text-secondary font-[500] mt-[14px] text-link-underline"
         >
           Bigener Adobe Illustrator for Graphic Design
         </Link>

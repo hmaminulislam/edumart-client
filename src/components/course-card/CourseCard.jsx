@@ -12,7 +12,9 @@ export default function CourseCard() {
     <div className="course-card">
       {/* top  */}
       <div className="relative">
+        <Link to={`/course/${"name"}`}>
         <img className="course-card-img" src={courseImg} alt="" />
+        </Link>
         <span className="absolute left-[20px] top-[20px] bg-secondary text-white font-[300] py-[4px] px-[14px] rounded-full text-[14px]">
           Marketing
         </span>
@@ -39,7 +41,10 @@ export default function CourseCard() {
             </span>
           </div>
         </div>
-        <Link className="text-[20px] sm:text-[22px] text-black">
+        <Link
+          to={`/course/${"name"}`}
+          className="text-[20px] text-neutral text-link-underline"
+        >
           Bigener Adobe Illustrator for Graphic Design
         </Link>
         <div className="flex items-center gap-[5px] border-b border-[#eeeeee] pb-[20px] pt-[14px]">

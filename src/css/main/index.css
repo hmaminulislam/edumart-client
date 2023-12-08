@@ -25,3 +25,15 @@ input:focus {
     line-height: 36px;
 }
 }
+
+.text-link-underline {
+  text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size .3s ease-in;
+}
+.text-link-underline:hover {
+  background-size: 100% 1px;
+}

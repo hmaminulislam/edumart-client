@@ -24,13 +24,16 @@ export default function EventCard() {
         <Link
           to={`/our-events/${"name"}`}
           state={{ prevUrl: location.pathname }}
-          className="text-[20px] font-[500x] text-secondary"
+          className="text-[20px] font-[500x] text-secondary text-link-underline"
         >
           Accessible Target Sizes Cheatsheet
         </Link>
         <div className="flex items-center gap-[8px] mt-[10px]">
           <GrLocation className="text-neutral" />
-          <span onClick={() => dispatch(increment())} className="text-neutral font-[300]">
+          <span
+            onClick={() => dispatch(increment())}
+            className="text-neutral font-[300]"
+          >
             Alexander City
           </span>
         </div>

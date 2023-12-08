@@ -49,7 +49,7 @@ export default function TopInstructor() {
             Borem ipsum dolor sit amet, consectetur adipiscing eliawe awut elit
             ellus, luctus nec ullamcorper mattisBorem
           </p>
-          <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px]">
+          <button className="flex items-center justify-center gap-2 bg-white text-secondary py-[14px] sm:px-[32px] px-[25px] rounded-[6px] hover:bg-secondary hover:text-white transition duration-300">
             Become an Instructor <FaArrowRight />
           </button>
           <img

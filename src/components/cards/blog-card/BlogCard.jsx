@@ -2,17 +2,13 @@ import React from 'react'
 import blogImg from '../../../assets/blog-card/blog_card.jpg'
 import { CiUser, CiCalendarDate } from "react-icons/ci";
 import { Link, useLocation } from 'react-router-dom';
-import "../../../css/card/blog-card.css";
 
 export default function BlogCard() {
   const location = useLocation();
   return (
     <div className="bg-white rounded-[8px] border border-[#eee]">
       <div>
-        <Link
-          to={`/blog/${"name"}`}
-          state={{ prevUrl: location.pathname }}
-        >
+        <Link to={`/blog/${"name"}`} state={{ prevUrl: location.pathname }}>
           <img
             className="w-[100%] h-[250px] rounded-t-[8px] object-cover"
             src={blogImg}
@@ -24,7 +20,7 @@ export default function BlogCard() {
         <Link
           to={`/blog/${"name"}`}
           state={{ prevUrl: location.pathname }}
-          className="sm:text-[20px] md:text-[22px] text-[19px] font-[500] text-secondary blog-title-link"
+          className="sm:text-[20px] md:text-[22px] text-[19px] font-[500] text-secondary text-link-underline"
         >
           What Leonardo Teach us About Web Design
         </Link>

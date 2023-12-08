@@ -12,24 +12,27 @@ const AccordionSection = ({
     setActiveIndex(nextIndex);
   };
   return (
-    <div onClick={toggleAccordion}>
+    <div>
       <div
-        className={`flex items-center justify-between gap-[10px] py-[20px] sm:px-[30px] px-[14px] ${
+        onClick={toggleAccordion}
+        className={`flex items-center justify-between gap-[10px] py-[20px] sm:px-[30px] px-[14px] border border-[#e0e2ea] cursor-pointer ${
           isActiveAccordion
-            ? "bg-primary text-white"
-            : "bg-[#E6F2FF] text-secondary cursor-pointer"
+            ? "bg-[#EFF1F6] text-primary rounded-t-[6px]"
+            : "bg-white text-secondary rounded-[6px]"
         }`}
       >
-        <h4 className="sm:w-[90%] w-[88%] sm:text-[22px] text-[16px] sm:font-[500] font-[400]">{item.ques}</h4>
+        <h4 className="sm:w-[90%] w-[88%] sm:text-[20px] text-[16px] sm:font-[500] font-[400]">
+          {item.ques}
+        </h4>
         {isActiveAccordion ? (
-          <FaMinus className="w-[35px] h-[35px] flex items-center justify-center text-primary p-[8px] bg-white rounded-full" />
+          <FaMinus className="text-primary text-[18px]" />
         ) : (
-          <FaPlus className={`w-[35px] h-[35px] flex items-center justify-center rounded-full p-[8px] ${isActiveAccordion ? 'bg-white text-primary' : 'bg-secondary text-white'} `} />
+          <FaPlus className="text-primary text-[18px]" />
         )}
       </div>
 
       {isActiveAccordion && (
-        <p className="text-neutral font-[300] py-[20px] px-[30px] bg-[#E6F2FF]">
+        <p className="text-neutral font-[300] py-[20px] px-[30px] bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px]">
           {item.ans}
         </p>
       )}
@@ -43,7 +46,7 @@ export default function Accordion() {
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
         {/* faq item  */}
-        <div className="flex flex-col gap-[5px] max-w-[900px] mx-auto">
+        <div className="flex flex-col gap-[15px] max-w-[900px] mx-auto">
           {data.map((item, index) => (
             <div key={index}>
               <AccordionSection

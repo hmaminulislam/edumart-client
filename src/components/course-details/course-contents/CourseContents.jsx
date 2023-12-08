@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../css/event-details/event-content.css";
 import { Link } from "react-router-dom";
 import { BsCardChecklist, BsFillCheckCircleFill } from "react-icons/bs";
@@ -8,8 +8,11 @@ import { GrUpdate } from "react-icons/gr";
 import instructorImg from '../../../assets/course-card/author_img.png'
 import CourseInfo from "./course-info/CourseInfo";
 import Curriculam from "./curriculam/Curriculam";
+import Reviews from "./reviews/Reviews";
+import Announcements from "./announcements/Announcements";
 
 export default function CourseContents() {
+  const [open, setOpen] = useState('course info')
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main flex flex-col md:flex-row gap-[40px]">
@@ -27,21 +30,52 @@ export default function CourseContents() {
             ></iframe>
           </div>
           <div className="mt-[40px]">
-            <div className="flex items-center gap-[50px] border-[#E6EAEF] border-b-[3px] pb-[20px]">
-              <button className="text-secondary font-[500] text-[20px]">
+            <div className="flex items-center flex-wrap sm:gap-x-[50px] gap-x-[25px] gap-y-[20px] border-[#E6EAEF] border-b-[1px] pb-[20px]">
+              <button
+                onClick={() => setOpen("course info")}
+                className={`font-[500] sm:text-[20px] text-[18px] pb-[3px] ${
+                  open === "course info"
+                    ? "text-primary border-b-[2px] border-primary"
+                    : "text-secondary border-b-[2px] border-white"
+                }`}
+              >
                 Course Info
               </button>
-              <button className="text-secondary font-[500] text-[20px]">
+              <button
+                onClick={() => setOpen("curriculam")}
+                className={`font-[500] sm:text-[20px] text-[18px] pb-[3px] ${
+                  open === "curriculam"
+                    ? "text-primary border-b-[2px] border-primary"
+                    : "text-secondary border-b-[2px] border-white"
+                }`}
+              >
                 Curriculam
               </button>
-              <button className="text-secondary font-[500] text-[20px]">
+              <button
+                onClick={() => setOpen("reviews")}
+                className={`font-[500] sm:text-[20px] text-[18px] pb-[3px] ${
+                  open === "reviews"
+                    ? "text-primary border-b-[2px] border-primary"
+                    : "text-secondary border-b-[2px] border-white"
+                }`}
+              >
                 Reviews
               </button>
-              <button className="text-secondary font-[500] text-[20px]">
+              <button
+                onClick={() => setOpen("announcements")}
+                className={`font-[500] sm:text-[20px] text-[18px] pb-[3px] ${
+                  open === "announcements"
+                    ? "text-primary border-b-[2px] border-primary"
+                    : "text-secondary border-b-[2px] border-white"
+                }`}
+              >
                 Announcements
               </button>
             </div>
-            <Curriculam />
+            {(open === "course info" && <CourseInfo />) ||
+              (open === "curriculam" && <Curriculam />) ||
+              (open === "reviews" && <Reviews />) ||
+              (open === "announcements" && <Announcements />)}
           </div>
         </div>
         {/* right  */}
