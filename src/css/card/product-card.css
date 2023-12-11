@@ -1,0 +1,10 @@
+.modal-box {
+    border-radius: 0px !important;
+    overflow-y: hidden;
+}
+.modal-box::-webkit-scrollbar {
+    display: none;
+}
+.modal:not(dialog:not(.modal-open)), .modal::backdrop {
+    background-color: rgb(0 0 0 / 74%) !important;
+}
