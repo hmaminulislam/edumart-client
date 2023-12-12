@@ -13,6 +13,7 @@ import EventDetails from "../pages/event-details/EventDetails";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog-details/BlogDetails";
 import CourseDetails from "../pages/course-details/CourseDetails";
+import ProductDetails from "../pages/product-details/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/shop/:name",
+        element: <ProductDetails />,
       },
       {
         path: "/faq",

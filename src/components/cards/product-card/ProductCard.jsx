@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
 import productImg from "../../../assets/shop/product_01.png";
 import "../../../css/card/product-card.css";
@@ -8,10 +8,11 @@ import { FaRegHeart, FaRegEye, FaMinus, FaPlus } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 export default function ProductCard() {
+  const location = useLocation();
   return (
     <div className="relative border flex flex-col items-center justify-center border-[#E8E8E8] rounded-[6px] px-[20px] pt-[10px] pb-[25px]">
       <div>
-        <Link>
+        <Link to={`/shop/${"name"}`} state={{ prevUrl: location.pathname }}>
           <img src={productImg} alt="" />
         </Link>
       </div>
@@ -91,7 +92,10 @@ export default function ProductCard() {
                   </p>
                 </div>
               </div>
-              <label className="absolute top-[10px] right-[10px] cursor-pointer" htmlFor="Product_Modal">
+              <label
+                className="absolute top-[10px] right-[10px] cursor-pointer"
+                htmlFor="Product_Modal"
+              >
                 <IoClose className="text-secondary text-[25px]" />
               </label>
             </div>
