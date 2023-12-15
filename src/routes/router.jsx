@@ -58,7 +58,10 @@ const router = createBrowserRouter([
         element: <Courses />,
       },
       {
-        path: "/our-events/:name",
+        path: "/our-events/:id",
+        loader: async ({ params }) => {
+          return fetch(`http://localhost:5000/event/${params.id}`);
+        },
         element: <EventDetails />,
       },
       {

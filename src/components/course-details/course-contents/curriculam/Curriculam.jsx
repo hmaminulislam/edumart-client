@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa6";
+import { FaPlus, FaMinus, FaYoutube } from "react-icons/fa6";
+import { MdLockOutline } from "react-icons/md";
 
 const AccordionSection = ({
   item,
@@ -22,7 +23,7 @@ const AccordionSection = ({
         }`}
       >
         <h4 className="sm:w-[90%] w-[88%] sm:text-[20px] text-[16px] sm:font-[500] font-[400]">
-          {item.ques}
+          {item.moduleName}
         </h4>
         {isActiveAccordion ? (
           <FaMinus className="text-primary text-[18px]" />
@@ -32,9 +33,22 @@ const AccordionSection = ({
       </div>
 
       {isActiveAccordion && (
-        <p className="text-neutral font-[300] py-[20px] px-[30px] bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px]">
-          {item.ans}
-        </p>
+        <div className="bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px]">
+          {item.moduleItems.map((name) => (
+            <div className="flex items-center justify-between px-[30px] py-[10px] bg-[white] hover:bg-[#eff1f6] trmoduleItemsition duration-300">
+              <div className="flex items-center gap-[12px]">
+                <FaYoutube className="text-gray-600" />
+                <p className="text-secondary">{name.title}</p>
+              </div>
+              <div className="flex items-center gap-[14px]">
+                <span className="font-[300] text-secondary text-[14px]">
+                  07:00
+                </span>
+                <MdLockOutline className="text-gray-500 text-[20px]" />
+              </div>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
@@ -47,7 +61,7 @@ export default function Curriculam() {
       <div>
         {/* faq items  */}
         <div className="flex flex-col gap-[15px] max-w-[900px] mx-auto">
-          {data.map((item, index) => (
+          {curriculam.map((item, index) => (
             <div key={index}>
               <AccordionSection
                 item={item}
@@ -63,37 +77,45 @@ export default function Curriculam() {
   );
 }
 
-const data = [
+const curriculam = [
   {
-    ques: "What is Learn Well System?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
+    moduleName: "Installing WordPress Locally",
+    moduleItems: [
+      { title: "How to install WordPress on your PC" },
+      { title: "Closing Down Local Site" },
+      { title: "Desktop Server Updated – Insecure Fix" },
+    ],
   },
   {
-    ques: "What is included in Standard membership plan?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
+    moduleName: "A first look around WordPress",
+    moduleItems: [
+      { title: "The WordPress Dashboard" },
+      { title: "Post & Page Editor" },
+      { title: "The Gutenberg Editor" },
+    ],
   },
   {
-    ques: "How to choose the right class for me?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
+    moduleName: "Wordpress settings, Plugins and Themes",
+    moduleItems: [
+      { title: "Setting up a Gravatar" },
+      { title: "Plugins & Adding a Sitemap" },
+      { title: "Allowing Comments & Comment Moderation" },
+    ],
   },
   {
-    ques: "Can I pause my Premium membership plan any time?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
+    moduleName: "Website conten with posts and pages",
+    moduleItems: [
+      { title: "WordPress Posts vs WordPress Pages" },
+      { title: "Social Sharing" },
+      { title: "Importance of Post Excerpts" },
+    ],
   },
   {
-    ques: "How does th Affiliate Program work?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
-  },
-  {
-    ques: "How we provide services for you?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
-  },
-  {
-    ques: "Where can I download the LearnWell app?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
-  },
-  {
-    ques: "How we became best among others?",
-    ans: "Sorem ipsum dolor sit amet consectetur adipiscing elit massa aenean orci erat pellentesque areaultrices idposere interdum est proin lacus acilisis faucibus egestas fringilla dolor tellus sit venenatis lorem ipsumaw dolor onsectur. Sorem ipsum dolor sit amet consectetu.",
+    moduleName: "WordPress security",
+    moduleItems: [
+      { title: "Introduction to WordPress Security" },
+      { title: "What to Do if a Plugin Locks you Out" },
+      { title: "How to change your WordPress Author Page Name (Advanced)" },
+    ],
   },
 ];
