@@ -5,7 +5,7 @@ const liveApi = "https://edumart-server.vercel.app";
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: localApi,
+    baseUrl: liveApi,
   }),
   endpoints: (builder) => ({
     getEvents: builder.query({
