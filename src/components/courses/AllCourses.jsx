@@ -461,7 +461,9 @@ export default function AllCourses() {
                 <button
                   onClick={() => setView(true)}
                   className={`w-[40px] h-[40px] p-[10px] flex items-center justify-center rounded-[4px] ${
-                    view ? "bg-primary text-white" : "bg-white text-primary border border-primary"
+                    view
+                      ? "bg-primary text-white"
+                      : "bg-white text-primary border border-primary"
                   }`}
                 >
                   <LuLayoutGrid className="text-[25px]" />
@@ -469,7 +471,9 @@ export default function AllCourses() {
                 <button
                   onClick={() => setView(!view)}
                   className={`w-[40px] h-[40px] p-[10px] flex items-center justify-center rounded-[4px] ${
-                    !view ? "bg-primary text-white" : "bg-white text-primary border border-primary"
+                    !view
+                      ? "bg-primary text-white"
+                      : "bg-white text-primary border border-primary"
                   }`}
                 >
                   <AiOutlineBars className="text-[25px]" />
@@ -766,17 +770,30 @@ export default function AllCourses() {
             </div>
           </div>
           {/* all course card */}
-          {view ? (
-            <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
-              {data && data.courses.slice(0, 9).map((course, index) => (
-                <CourseCardSmall course={course} key={index} />
-              ))}
-            </div>
-          ) : (
-            <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-[25px] lg:gap-[30px]">
-              {data.map((course) => (
-                <CourseCardLarge />
-              ))}
+          {data && (
+            <>
+              {view ? (
+                <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+                  {data &&
+                    data.courses
+                      .slice(0, 9)
+                      .map((course, index) => (
+                        <CourseCardSmall course={course} key={course._id} />
+                      ))}
+                </div>
+              ) : (
+                <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-[25px] lg:gap-[30px]">
+                  {data.courses.slice(0, 9).map((course) => (
+                    <CourseCardLarge course={course} key={course._id} />
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+          {/* loading element */}
+          {isLoading && (
+            <div className="lg:w-[75%] md:w-[72%] flex flex-col items-center mt-[40px] md:mt-[100px]">
+              <span className="loading text-primary loading-dots loading-lg"></span>
             </div>
           )}
         </div>

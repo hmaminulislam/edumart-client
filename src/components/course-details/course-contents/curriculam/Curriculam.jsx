@@ -23,7 +23,7 @@ const AccordionSection = ({
         }`}
       >
         <h4 className="sm:w-[90%] w-[88%] sm:text-[20px] text-[16px] sm:font-[500] font-[400]">
-          {item.moduleName}
+          {item?.moduleName}
         </h4>
         {isActiveAccordion ? (
           <FaMinus className="text-primary text-[18px]" />
@@ -34,11 +34,11 @@ const AccordionSection = ({
 
       {isActiveAccordion && (
         <div className="bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px]">
-          {item.moduleItems.map((name) => (
+          {item.moduleItems?.map((name) => (
             <div className="flex items-center justify-between px-[30px] py-[10px] bg-[white] hover:bg-[#eff1f6] trmoduleItemsition duration-300">
               <div className="flex items-center gap-[12px]">
                 <FaYoutube className="text-gray-600" />
-                <p className="text-secondary">{name.title}</p>
+                <p className="text-secondary">{name?.title}</p>
               </div>
               <div className="flex items-center gap-[14px]">
                 <span className="font-[300] text-secondary text-[14px]">
@@ -54,14 +54,15 @@ const AccordionSection = ({
   );
 };
 
-export default function Curriculam() {
+export default function Curriculam({ course }) {
+  const { curriculum } = course;
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="mt-[40px]">
       <div>
         {/* faq items  */}
         <div className="flex flex-col gap-[15px] max-w-[900px] mx-auto">
-          {curriculam.map((item, index) => (
+          {curriculum?.map((item, index) => (
             <div key={index}>
               <AccordionSection
                 item={item}
@@ -77,45 +78,45 @@ export default function Curriculam() {
   );
 }
 
-const curriculam = [
-  {
-    moduleName: "Installing WordPress Locally",
-    moduleItems: [
-      { title: "How to install WordPress on your PC" },
-      { title: "Closing Down Local Site" },
-      { title: "Desktop Server Updated – Insecure Fix" },
-    ],
-  },
-  {
-    moduleName: "A first look around WordPress",
-    moduleItems: [
-      { title: "The WordPress Dashboard" },
-      { title: "Post & Page Editor" },
-      { title: "The Gutenberg Editor" },
-    ],
-  },
-  {
-    moduleName: "Wordpress settings, Plugins and Themes",
-    moduleItems: [
-      { title: "Setting up a Gravatar" },
-      { title: "Plugins & Adding a Sitemap" },
-      { title: "Allowing Comments & Comment Moderation" },
-    ],
-  },
-  {
-    moduleName: "Website conten with posts and pages",
-    moduleItems: [
-      { title: "WordPress Posts vs WordPress Pages" },
-      { title: "Social Sharing" },
-      { title: "Importance of Post Excerpts" },
-    ],
-  },
-  {
-    moduleName: "WordPress security",
-    moduleItems: [
-      { title: "Introduction to WordPress Security" },
-      { title: "What to Do if a Plugin Locks you Out" },
-      { title: "How to change your WordPress Author Page Name (Advanced)" },
-    ],
-  },
-];
+// const curriculam = [
+//   {
+//     moduleName: "Installing WordPress Locally",
+//     moduleItems: [
+//       { title: "How to install WordPress on your PC" },
+//       { title: "Closing Down Local Site" },
+//       { title: "Desktop Server Updated – Insecure Fix" },
+//     ],
+//   },
+//   {
+//     moduleName: "A first look around WordPress",
+//     moduleItems: [
+//       { title: "The WordPress Dashboard" },
+//       { title: "Post & Page Editor" },
+//       { title: "The Gutenberg Editor" },
+//     ],
+//   },
+//   {
+//     moduleName: "Wordpress settings, Plugins and Themes",
+//     moduleItems: [
+//       { title: "Setting up a Gravatar" },
+//       { title: "Plugins & Adding a Sitemap" },
+//       { title: "Allowing Comments & Comment Moderation" },
+//     ],
+//   },
+//   {
+//     moduleName: "Website conten with posts and pages",
+//     moduleItems: [
+//       { title: "WordPress Posts vs WordPress Pages" },
+//       { title: "Social Sharing" },
+//       { title: "Importance of Post Excerpts" },
+//     ],
+//   },
+//   {
+//     moduleName: "WordPress security",
+//     moduleItems: [
+//       { title: "Introduction to WordPress Security" },
+//       { title: "What to Do if a Plugin Locks you Out" },
+//       { title: "How to change your WordPress Author Page Name (Advanced)" },
+//     ],
+//   },
+// ];

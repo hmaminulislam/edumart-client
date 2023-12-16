@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "../../../css/event-details/event-content.css";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { BsCardChecklist, BsFillCheckCircleFill } from "react-icons/bs";
 import { FaUsers, FaGraduationCap } from "react-icons/fa";
 import { MdAccessTime } from "react-icons/md";
 import { GrUpdate } from "react-icons/gr";
-import instructorImg from '../../../assets/course-card/author_img.png'
 import CourseInfo from "./course-info/CourseInfo";
 import Curriculam from "./curriculam/Curriculam";
 import Reviews from "./reviews/Reviews";
@@ -13,6 +12,20 @@ import Announcements from "./announcements/Announcements";
 
 export default function CourseContents() {
   const [open, setOpen] = useState('course info')
+  const course = useLoaderData()
+  const {
+    duration,
+    requirements,
+    enrolled,
+    instructorDetails,
+    instructorName,
+    instructorImg,
+    language,
+    lastUpdate,
+    level,
+    price,
+  } = course;
+  // console.log(course.curriculum)
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main flex flex-col md:flex-row gap-[40px]">
@@ -72,8 +85,10 @@ export default function CourseContents() {
                 Announcements
               </button>
             </div>
-            {(open === "course info" && <CourseInfo />) ||
-              (open === "curriculam" && <Curriculam />) ||
+            {(open === "course info" && <CourseInfo course={course} />) ||
+              (open === "curriculam" && (
+                <Curriculam course={course} />
+              )) ||
               (open === "reviews" && <Reviews />) ||
               (open === "announcements" && <Announcements />)}
           </div>
@@ -83,7 +98,7 @@ export default function CourseContents() {
           {/* box item  */}
           <div className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px] event-cont-right-box">
             <h3 className="text-[25px] font-[600] text-secondary mb-[20px]">
-              $45.00
+              ${price}
             </h3>
             <Link to="/">
               <button className="flex items-center justify-center gap-2 bg-primary text-white border border-primary py-[13px] px-[45px] md:px-[10px] md:w-[90%] md:mx-auto rounded-[6px] hover:bg-secondary transition duration-300">
@@ -102,30 +117,30 @@ export default function CourseContents() {
             <div className="flex flex-col gap-[20px] mt-[40px]">
               <div className="flex items-center gap-[15px]">
                 <BsCardChecklist className="text-neutral text-[20px]" />
-                <p className="font-[300] text-neutral text-[15px]">
-                  All Levels
-                </p>
+                <p className="font-[300] text-neutral text-[15px]">{level}</p>
               </div>
               <div className="flex items-center gap-[15px]">
                 <FaUsers className="text-neutral text-[20px]" />
                 <p className="font-[300] text-neutral text-[15px]">
-                  63 Total Enrolled
+                  {enrolled} Total Enrolled
                 </p>
               </div>
               <div className="flex items-center gap-[15px]">
                 <FaGraduationCap className="text-neutral text-[20px]" />
-                <p className="font-[300] text-neutral text-[15px]">English</p>
+                <p className="font-[300] text-neutral text-[15px]">
+                  {language}
+                </p>
               </div>
               <div className="flex items-center gap-[15px]">
                 <MdAccessTime className="text-neutral text-[20px]" />
                 <p className="font-[300] text-neutral text-[15px]">
-                  12 hours 30 minute
+                  {duration}
                 </p>
               </div>
               <div className="flex items-center gap-[15px]">
                 <GrUpdate className="text-neutral text-[20px]" />
                 <p className="font-[300] text-neutral text-[15px]">
-                  July 23, 2023 Last
+                  {lastUpdate} Last
                 </p>
               </div>
             </div>
@@ -140,20 +155,17 @@ export default function CourseContents() {
             </h3>
             <div className="flex flex-col gap-[10px] mt-[30px]">
               <img
-                className="w-[100px] h-[100px] rounded-full mx-auto"
+                className="w-[100px] h-[100px] rounded-full px-[4px] pt-[5px] mx-auto object-contain bg-lime-200"
                 src={instructorImg}
                 alt=""
               />
               <p className="text-[20px] font-[500] text-neutral text-center">
-                Taslima Khatun
+                {instructorName}
               </p>
             </div>
             <div className="flex flex-col gap-[10px] mt-[20px]">
               <p className="text-secondary text-[18px] font-[500]">Audience</p>
-              <p className="text-neutral text-[14px]">
-                Anyone wanting to learn the truth about dieting & meal planning.
-                Anyone with an open mind towards dieting.
-              </p>
+              <p className="text-neutral text-[14px]">{instructorDetails}</p>
             </div>
           </div>
           {/* box item  */}
@@ -162,10 +174,9 @@ export default function CourseContents() {
               Requirements
             </h3>
             <div className="mt-[40px]">
-              <p className="text-neutral font-[500]">Language Proficiency:</p>
+              <p className="text-neutral font-[500]">Proficiency:</p>
               <p className="text-neutral font-[300] mt-[10px]">
-                Develop fluency in spoken and written English. Enhance
-                vocabulary and language comprehension skills.
+                {requirements}
               </p>
             </div>
           </div>

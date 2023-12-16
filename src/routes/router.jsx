@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/our-events/:id",
-        loader: async ({ params }) => {
+        loader: ({ params }) => {
           return fetch(`https://edumart-server.vercel.app/event/${params.id}`);
         },
         element: <EventDetails />,
@@ -73,7 +73,10 @@ const router = createBrowserRouter([
         element: <BlogDetails />,
       },
       {
-        path: "/course/:name",
+        path: "/course/:id",
+        loader: ({ params }) => {
+          return fetch(`https://edumart-server.vercel.app/course/${params.id}`);
+        },
         element: <CourseDetails />,
       },
     ],

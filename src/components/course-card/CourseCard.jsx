@@ -8,7 +8,7 @@ import authorImg from "../../assets/course-card/author_img.png";
 import '../../css/card/course-card.css'
 
 export default function CourseCard({ course }) {
-  const { name, img, lessons, duration, Requirements, curriculam, enrolled, info, instructorDetails, instructorName, instructorImg, language, lastUpdate, level, price, progmams, students, _id } =
+  const { name, img, lessons, duration, category, Requirements, curriculam, enrolled, info, instructorDetails, instructorName, instructorImg, language, lastUpdate, level, price, progmams, students, _id } =
     course;
   return (
     <div className="course-card flex flex-col justify-between">
@@ -22,7 +22,7 @@ export default function CourseCard({ course }) {
           />
         </Link>
         <span className="absolute left-[20px] top-[20px] bg-secondary text-white font-[300] py-[4px] px-[14px] rounded-full text-[14px]">
-          Marketing
+          {category}
         </span>
       </div>
       {/* content  */}

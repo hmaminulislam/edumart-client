@@ -12,7 +12,7 @@ export default function CourseCardSmall({ course }) {
     img,
     lessons,
     duration,
-    Requirements,
+    category,
     curriculam,
     enrolled,
     info,
@@ -34,7 +34,7 @@ export default function CourseCardSmall({ course }) {
           <img className="rounded-[4px]" src={img} alt="" />
         </Link>
         <img
-          className="absolute right-[15px] bottom-[-25px] h-[60px] w-[60px] object-contain border-[4px] border-white rounded-full"
+          className="absolute right-[15px] bottom-[-25px] h-[60px] w-[60px] object-contain border-[3px] border-white rounded-full bg-lime-200 p-[2px]"
           src={instructorImg}
           alt=""
         />
@@ -42,7 +42,7 @@ export default function CourseCardSmall({ course }) {
       <div className="mt-[25px]">
         <div className="mb-[4px]">
           <p className="py-[4px] px-[10px] text-[14px] bg-[#E8F9EF] inline-block rounded-full">
-            Marketing
+            {category}
           </p>
         </div>
         <Link
