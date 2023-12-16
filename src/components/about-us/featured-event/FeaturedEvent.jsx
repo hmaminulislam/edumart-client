@@ -29,14 +29,18 @@ export default function FeaturedEvent() {
         </div>
         {/* event content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-[50px]">
-          {data ? (
-            data.events.slice(0, 3).map((events, index) => (
-              <EventCard events={events} key={index} />
-            ))
-          ) : (
-            <h2>Not found</h2>
-          )}
+          {data &&
+            data.events
+              .slice(0, 3)
+              .map((events, index) => (
+                <EventCard events={events} key={index} />
+              ))}
         </div>
+        {isLoading && (
+          <div className="flex items-center justify-center">
+            <span className="loading text-primary loading-dots loading-lg"></span>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -11,7 +11,10 @@ export const api = createApi({
     getEvents: builder.query({
       query: () => `/events`,
     }),
+    getCourses: builder.query({
+      query: () => `/courses`
+    })
   }),
 });
 
-export const { useGetEventsQuery } = api;
+export const { useGetEventsQuery, useGetCoursesQuery } = api;

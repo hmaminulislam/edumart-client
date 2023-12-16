@@ -47,47 +47,52 @@ export default function ProductCard() {
           >
             <FaRegEye className="text-[17px]" />
           </label>
-          {/* Put this part before </body> tag */}
           <input type="checkbox" id="Product_Modal" className="modal-toggle" />
           <div className="modal" role="dialog">
-            <div className="modal-box w-11/12 max-w-4xl h-[480px] flex items-center">
-              <div className="sm:w-[50%]">
-                <img src={productImg} alt="" />
+            <div className="modal-box w-11/12 max-w-4xl h-[480px] flex flex-col md:flex-row items-center">
+              <div className="md:w-[50%]">
+                <img
+                  className="max-w-[130px] sm:max-w-[200px] md:max-w-[100%]"
+                  src={productImg}
+                  alt=""
+                />
               </div>
-              <div className="sm:w-[50%]">
-                <h3 className="text-secondary text-[24px] font-[500]">
+              <div className="md:w-[50%] mt-[5px] sm:mt-0">
+                <h3 className="text-secondary text-[20px] sm:text-[24px] font-[500]">
                   Book Cover Design
                 </h3>
-                <p className="text-primary text-[20px] font-[500]">$36.00</p>
-                <p className="text-neutral font-[300] mt-[10px]">
+                <p className="text-primary text-[17px] sm:text-[20px] font-[500]">
+                  $36.00
+                </p>
+                <p className="text-neutral text-[14px] sm:text-base font-[300] mt-[5px] sm:mt-[10px]">
                   Grursus mal suada faci lisis Lorem ipsum dolarorit more
                   ametion consectetur Vesti at bulum nec odio aea the dumm summ
                   ipsum that dolocons rsus mal suada and fadolorit to the
                   consectetur elit.
                 </p>
-                <div className="mt-[20px] flex items-center gap-[25px]">
+                <div className="sm:mt-[20px] mt-[14px] flex items-center sm:gap-[25px] gap-[14px]">
                   <div className="flex items-center justify-center border border-[#e1e1e1] rounded-[6px] max-w-[115px]">
-                    <span className="p-[10px] cursor-pointer">
+                    <span className="px-[10px] sm:py-[10px] py-[8px] cursor-pointer">
                       <FaMinus className="text-secondary text-[10px]" />
                     </span>
-                    <span className="text-secondary border-x border-[#e1e1e1] px-[20px] py-[10px]">
+                    <span className="text-secondary border-x border-[#e1e1e1] px-[20px] sm:py-[10px] py-[8px]">
                       0
                     </span>
-                    <span className="p-[10px] cursor-pointer">
+                    <span className="px-[10px] sm:py-[10px] py-[8px] cursor-pointer">
                       <FaPlus className="text-secondary text-[10px]" />
                     </span>
                   </div>
-                  <button className="bg-primary text-white border border-primary py-[10px] sm:px-[32px] px-[24px] rounded-[6px] hover:bg-white hover:text-primary transition duration-300">
+                  <button className="bg-primary text-[14px] sm:text-base text-white border border-primary py-[10px] sm:px-[32px] px-[14px] rounded-[6px] hover:bg-white hover:text-primary transition duration-300">
                     Add To Cart
                   </button>
                 </div>
-                <div className="w-[100%] h-[1px] bg-[#e1e1e1] mt-[30px]"></div>
+                <div className="w-[100%] h-[1px] bg-[#e1e1e1] mt-[24px] sm:mt-[30px]"></div>
                 <div className="mt-[20px]">
-                  <p className="text-secondary mb-[6px]">
+                  <p className="text-secondary text-[15px] sm:text-base mb-[6px]">
                     Categories :{" "}
                     <span className="font-[300]">Art & Design, Finance</span>
                   </p>
-                  <p className="text-secondary">
+                  <p className="text-secondary text-[15px] sm:text-base">
                     Tags : <span className="font-[300]">Cover, UX/UI</span>
                   </p>
                 </div>

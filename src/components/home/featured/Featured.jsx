@@ -1,7 +1,9 @@
 import React from 'react'
 import CourseCard from '../../course-card/CourseCard';
+import { useGetCoursesQuery } from '../../../redux/api/api';
 
 export default function Featured() {
+  const { data, isLoading, error } = useGetCoursesQuery(undefined)
   return (
     <div className="bg-[#F4F7FB] 2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
@@ -28,20 +30,11 @@ export default function Featured() {
         </div>
         {/* couse card contents */}
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] mt-[40px]">
-          {data.map((course, index) => (
-            <CourseCard key={index} course={course} />
+          {data && data?.courses.slice(0, 6).map((course) => (
+            <CourseCard key={course._id} course={course} />
           ))}
         </div>
       </div>
     </div>
   );
 }
-
-const data = [
-    {name: 'course name'},
-    {name: 'course name'},
-    {name: 'course name'},
-    {name: 'course name'},
-    {name: 'course name'},
-    {name: 'course name'},
-]

@@ -7,8 +7,12 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import CourseCardSmall from "../cards/course-cards/CourseCardSmall";
 import { IoFilterSharp, IoCloseSharp } from "react-icons/io5";
 import CourseCardLarge from "../cards/course-cards/CourseCardLarge";
+import { useGetCoursesQuery } from "../../redux/api/api";
 
 export default function AllCourses() {
+
+  const { data, isLoading, error } = useGetCoursesQuery(undefined);
+
   const [sortOpen, setSortOpen] = useState(false);
   const [sortName, setSortName] = useState("Newest");
   const [view, setView] = useState(true);
@@ -764,7 +768,7 @@ export default function AllCourses() {
           {/* all course card */}
           {view ? (
             <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
-              {data.map((course, index) => (
+              {data && data.courses.slice(0, 9).map((course, index) => (
                 <CourseCardSmall course={course} key={index} />
               ))}
             </div>
@@ -780,16 +784,3 @@ export default function AllCourses() {
     </div>
   );
 }
-
-// dummy data
-const data = [
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-];
