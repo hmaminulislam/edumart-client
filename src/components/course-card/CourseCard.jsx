@@ -3,15 +3,19 @@ import { FiFileText, FiUsers } from "react-icons/fi";
 import { FaStar } from "react-icons/fa6";
 import { MdAccessTime } from "react-icons/md";
 import { Link } from "react-router-dom";
-import courseImg from "../../assets/course-card/courses01.jpg";
-import authorImg from "../../assets/course-card/author_img.png";
 import '../../css/card/course-card.css'
+import {motion} from 'framer-motion'
 
 export default function CourseCard({ course }) {
-  const { name, img, lessons, duration, category, Requirements, curriculam, enrolled, info, instructorDetails, instructorName, instructorImg, language, lastUpdate, level, price, progmams, students, _id } =
+  const { name, img, lessons, duration, category, curriculam, info, instructorDetails, instructorName, instructorImg, language, lastUpdate, level, price, progmams, students, _id } =
     course;
   return (
-    <div className="course-card flex flex-col justify-between">
+    <motion.div
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      className="course-card flex flex-col justify-between"
+    >
       {/* top  */}
       <div className="relative">
         <Link to={`/course/${_id}`}>
@@ -77,6 +81,6 @@ export default function CourseCard({ course }) {
           <p className="text-[20px] font-[500] text-primary">{`$${price}`}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
