@@ -97,7 +97,7 @@ export default function Featured() {
         </div>
         {/* loading element */}
         {isLoading && (
-          <div className="lg:w-[75%] md:w-[72%] flex flex-col items-center mt-[40px] md:mt-[100px]">
+          <div className="lg:w-[75%] md:w-[72%] flex justify-center items-center mt-[40px] md:mt-[100px]">
             <span className="loading text-primary loading-dots loading-lg"></span>
           </div>
         )}

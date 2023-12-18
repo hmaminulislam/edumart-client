@@ -32,7 +32,7 @@ const AccordionSection = ({
       </div>
 
       {isActiveAccordion && (
-        <p className="text-neutral font-[300] py-[20px] px-[30px] bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px]">
+        <p className="text-neutral font-[300] pt-[16px] pb-[20px] sm:px-[30px] px-[14px] bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px] text-[15px] sm:text-base">
           {item.ans}
         </p>
       )}
