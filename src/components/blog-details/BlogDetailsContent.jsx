@@ -15,20 +15,9 @@ import { useGetBlogByIdQuery } from "../../redux/api/api";
 
 export default function EventContent() {
 
-  const {id} = useParams()
-  
+  const { id } = useParams()
+
   const { data, isLoading, error } = useGetBlogByIdQuery(id)
-  const {
-    name,
-    img,
-    authorName,
-    date,
-    description,
-    blockquote,
-    during,
-    programs,
-    conclusion,
-  } = data;
   
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
@@ -38,7 +27,7 @@ export default function EventContent() {
           <div className="mb-[30px]">
             <img
               className="lg:h-[500px] h-[300px] sm:h-[320px] rounded-[8px] object-cover w-full"
-              src={img}
+              src={data?.img}
               alt=""
             />
           </div>
@@ -48,39 +37,39 @@ export default function EventContent() {
           <div className="flex flex-wrap items-center sm:gap-[20px] gap-y-[15px] gap-x-[20px] mt-[20px]">
             <div className="flex items-center gap-[6px]">
               <CiUser className="text-primary text-[18px]" />
-              <p className="text-neutral font-[300]">{authorName}</p>
+              <p className="text-neutral font-[300]">{data?.authorName}</p>
             </div>
             <div className="flex items-center gap-[6px]">
               <FaRegCalendarAlt className="text-primary text-[16px]" />
-              <p className="text-neutral font-[300]">{date}</p>
+              <p className="text-neutral font-[300]">{data?.date}</p>
             </div>
             <div className="flex items-center gap-[6px]">
               <FaRegComment className="text-primary text-[18px]" />
               <p className="text-neutral font-[300]">No Comments</p>
             </div>
           </div>
-          <p className="text-neutral mt-[20px] font-[300]">{description}</p>
+          <p className="text-neutral mt-[20px] font-[300]">{data?.description}</p>
           <div className="flex justify-between gap-[35px] py-[40px] px-[35px] border-l-[6px] mt-[35px] border-primary bg-[#F1F8FF]">
             <p className="text-secondary font-[500] text-[22px]">
-              {blockquote}
+              {data?.blockquote}
             </p>
             <FaQuoteRight className="text-[100px] text-neutral mt-[-30px]" />
           </div>
           <h4 className="text-neutral text-[22px] mt-[30px] mb-[5px]">
             During this program :
           </h4>
-          <p className="text-neutral font-[300]">{during}</p>
+          <p className="text-neutral font-[300]">{data?.during}</p>
           {/* list items  */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[15px] sm:gap-[20px] mt-[30px] sm:mt-[40px]">
-            {programs.map((prog) => (
-              <div key={prog._id} className="flex items-center gap-[10px]">
+            {data?.programs?.map((prog) => (
+              <div key={prog?._id} className="flex items-center gap-[10px]">
                 <BsFillCheckCircleFill className="text-primary text-[24px]" />
-                <p className="text-neutral">{prog.title}</p>
+                <p className="text-neutral">{prog?.title}</p>
               </div>
             ))}
           </div>
           {/* item  */}
-          <p className="text-neutral font-[300] mt-[40px]">{conclusion}</p>
+          <p className="text-neutral font-[300] mt-[40px]">{data?.conclusion}</p>
           {/* comment form */}
           <div className="border-t-[1px] border[#E6E6E6] pt-[40px] mt-[50px]">
             <h3 className="text-[22px] font-[500] text-secondary">

@@ -1,24 +1,22 @@
 import React from "react";
 import "../../css/event-details/event-content.css";
-import sponserLogo1 from "../../assets/home/client-slider/brand01.png";
-import sponserLogo2 from "../../assets/home/client-slider/brand02.png";
-import sponserLogo3 from "../../assets/home/client-slider/brand03.png";
-import sponserLogo4 from "../../assets/home/client-slider/brand04.png";
-import sponserLogo5 from "../../assets/home/client-slider/brand05.png";
-import sponserLogo6 from "../../assets/home/client-slider/brand06.png";
 import BlogCard from "../cards/blog-card/BlogCard";
 import blogSiteImg from "../../assets/blog-card/blog_card.jpg";
 import { Link } from "react-router-dom";
 import { LuCalendarCheck } from "react-icons/lu";
+import { useGetBlogsQuery } from "../../redux/api/api";
 
 export default function BlogAll() {
+  // get blogs redux api
+  const { isLoading, data, error } = useGetBlogsQuery(undefined);
+  
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main flex flex-col md:flex-row gap-[40px]">
         {/* left  */}
         <div className="md:w-[70%] lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-[30px]">
-          {data.map((blog, index) => (
-            <BlogCard key={index} blog={blog} />
+          {data?.map((blog) => (
+            <BlogCard key={blog._id} blog={blog} />
           ))}
         </div>
         {/* right  */}
