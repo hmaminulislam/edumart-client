@@ -12,6 +12,8 @@ import { FaRegComment } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { FaQuoteRight } from "react-icons/fa";
 import { useGetBlogByIdQuery } from "../../redux/api/api";
+import RecentPost from "../blog/recent-post/RecentPost";
+import BlogCategory from "../blog/blog-category/BlogCategory";
 
 export default function EventContent() {
 
@@ -114,110 +116,10 @@ export default function EventContent() {
         </div>
         {/* right  */}
         <div className="md:w-[30%] lg:w-[25%]">
-          {/* box item  */}
-          <div className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px] event-cont-right-box">
-            <h3 className="text-[20px] font-[500] text-secondary event-underline-title">
-              Categories
-            </h3>
-            <div className="flex flex-col gap-[10px] mt-[35px]">
-              <p className="text-secondary font-[300]">Art & Design</p>
-              <p className="text-secondary font-[300]">Buniness</p>
-              <p className="text-secondary font-[300]">Data Science</p>
-              <p className="text-secondary font-[300]">Finance</p>
-            </div>
-          </div>
-          {/* box item  */}
-          <div className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px] event-cont-right-box">
-            <h3 className="text-[20px] font-[500] text-secondary event-underline-title">
-              Recent Posts
-            </h3>
-            <div className="mt-[40px] flex flex-col gap-[22px]">
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
+          {/* blog category  */}
+          <BlogCategory />
+          {/* recent posts */}
+          <RecentPost />
           {/* box item  */}
           <div
             className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px]

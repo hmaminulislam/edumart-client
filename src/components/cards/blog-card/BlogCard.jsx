@@ -2,6 +2,7 @@ import React from 'react'
 import blogImg from '../../../assets/blog-card/blog_card.jpg'
 import { CiUser, CiCalendarDate } from "react-icons/ci";
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 export default function BlogCard({ blog }) {
   
@@ -10,7 +11,12 @@ export default function BlogCard({ blog }) {
   const { name, img, _id, authorName, date } = blog;
 
   return (
-    <div className="bg-white rounded-[8px] border border-[#eee]">
+    <motion.div
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      className="bg-white rounded-[8px] border border-[#eee]"
+    >
       <div>
         <Link to={`/blog/${_id}`} state={{ prevUrl: location.pathname }}>
           <img
@@ -39,6 +45,6 @@ export default function BlogCard({ blog }) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

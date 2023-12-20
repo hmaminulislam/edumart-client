@@ -1,130 +1,50 @@
 import React from "react";
 import "../../css/event-details/event-content.css";
 import BlogCard from "../cards/blog-card/BlogCard";
-import blogSiteImg from "../../assets/blog-card/blog_card.jpg";
 import { Link } from "react-router-dom";
-import { LuCalendarCheck } from "react-icons/lu";
 import { useGetBlogsQuery } from "../../redux/api/api";
+import RecentPost from "./recent-post/RecentPost";
+import BlogCategory from "./blog-category/BlogCategory";
+import { useSelector } from "react-redux";
+import { AnimatePresence } from "framer-motion";
 
 export default function BlogAll() {
+
   // get blogs redux api
   const { isLoading, data, error } = useGetBlogsQuery(undefined);
-  
+
+  // blog data
+  let blogData;
+
+  // handle category filter
+  const { category } = useSelector((state) => state.blog);
+
+  if (category === "All") {
+    blogData = data;
+  } else {
+    const blogCatData = data.filter((blog) => blog.category === category);
+    blogData = blogCatData;
+  }
+
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main flex flex-col md:flex-row gap-[40px]">
         {/* left  */}
-        <div className="md:w-[70%] lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-[30px]">
-          {data?.map((blog) => (
-            <BlogCard key={blog._id} blog={blog} />
-          ))}
+        <div className="md:w-[70%] lg:w-[75%]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-[30px]">
+            <AnimatePresence>
+              {blogData?.map((blog) => (
+                <BlogCard key={blog._id} blog={blog} />
+              ))}
+            </AnimatePresence>
+          </div>
         </div>
         {/* right  */}
         <div className="md:w-[30%] lg:w-[25%]">
-          {/* box item  */}
-          <div className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px] event-cont-right-box">
-            <h3 className="text-[20px] font-[500] text-secondary event-underline-title">
-              Categories
-            </h3>
-            <div className="flex flex-col gap-[10px] mt-[35px]">
-              <p className="text-secondary font-[300]">Art & Design</p>
-              <p className="text-secondary font-[300]">Buniness</p>
-              <p className="text-secondary font-[300]">Data Science</p>
-              <p className="text-secondary font-[300]">Finance</p>
-            </div>
-          </div>
-          {/* box item  */}
-          <div className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px] event-cont-right-box">
-            <h3 className="text-[20px] font-[500] text-secondary event-underline-title">
-              Recent Posts
-            </h3>
-            <div className="mt-[40px] flex flex-col gap-[22px]">
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-              {/* blog item  */}
-              <Link className="flex items-center gap-[14px]">
-                <div className="w-[180px] h-[80px]">
-                  <img
-                    className="object-cover h-full rounded-[4px]"
-                    src={blogSiteImg}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[15px] font-[500] text-secondary">
-                    When aeunkno printer took galley of..
-                  </h3>
-                  <div className="flex items-center gap-[5px]">
-                    <LuCalendarCheck className="text-primary" />
-                    <span className="text-[14px] font-[300] text-neutral">
-                      Jun 22, 2024
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
+          {/* blog categories  */}
+          <BlogCategory />
+          {/* recent posts  */}
+          <RecentPost />
           {/* box item  */}
           <div
             className="border border-[#ececec] py-[30px] px-[20px] rounded-[8px] sm:mb-[30px] mb-[20px]
