@@ -13,8 +13,14 @@ export const api = createApi({
     }),
     getCourses: builder.query({
       query: () => `/courses`
-    })
+    }),
+    getBlogs: builder.query({
+      query: () => `/blogs`
+    }),
+    getBlogById: builder.query({
+      query: (id) => `/blog/${id}`
+    }),
   }),
 });
 
-export const { useGetEventsQuery, useGetCoursesQuery } = api;
+export const { useGetEventsQuery, useGetCoursesQuery, useGetBlogsQuery, useGetBlogByIdQuery } = api;

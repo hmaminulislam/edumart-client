@@ -1,7 +1,12 @@
 import React from "react";
 import BlogCard from "../../cards/blog-card/BlogCard";
+import { useGetBlogsQuery } from "../../../redux/api/api";
 
 export default function LatestBlog() {
+
+  // get blogs redux api
+  const { isLoading, data, error } = useGetBlogsQuery(undefined)
+  
   return (
     <div className="bg-[#F5F7FB] 2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
@@ -21,25 +26,11 @@ export default function LatestBlog() {
         </div>
         {/* blog card content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-[50px]">
-          {blogs.map((blog, index) => (
-            <BlogCard blog={blog} key={index} />
+          {data?.slice(0, 3).map((blog) => (
+            <BlogCard blog={blog} key={blog._id} />
           ))}
         </div>
       </div>
     </div>
   );
 }
-
-// dummy blog content
-
-const blogs = [
-  {
-    name: "1",
-  },
-  {
-    name: "1",
-  },
-  {
-    name: "1",
-  },
-];

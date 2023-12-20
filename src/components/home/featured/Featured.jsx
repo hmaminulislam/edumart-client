@@ -10,6 +10,7 @@ export default function Featured() {
 
   let coursesData;
 
+  // filter by category 
   if (currentCat) {
     if (currentCat === undefined) {
       coursesData = data.courses;
@@ -95,12 +96,6 @@ export default function Featured() {
                 ))}
           </AnimatePresence>
         </div>
-        {/* loading element */}
-        {isLoading && (
-          <div className="lg:w-[75%] md:w-[72%] flex justify-center items-center mt-[40px] md:mt-[100px]">
-            <span className="loading text-primary loading-dots loading-lg"></span>
-          </div>
-        )}
       </div>
     </div>
   );
