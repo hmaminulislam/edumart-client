@@ -10,16 +10,16 @@ export default function ProductDetailsContent() {
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
         {/* product details */}
-        <div className="flex items-center">
-          <div className="sm:w-[45%]">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-[40px]">
+          <div className="md:w-[45%] bg-[#f6f6f6] md:p-[40px] p-[20px]">
             <img
-              className="bg-[#f6f6f6] max-h-[500px]"
+              className="max-h-[500px] max-w-[200px] md:max-w-[260px] md:mx-auto"
               src={productImg}
               alt=""
             />
           </div>
-          <div className="sm:w-[55%]">
-            <h3 className="text-secondary text-[30px] font-[600]">
+          <div className="md:w-[55%]">
+            <h3 className="text-secondary text-[24px] sm:text-[30px] font-[600]">
               Book Cover Design
             </h3>
             <div className="flex items-center gap-[10px] mb-[6px] mt-[4px]">
@@ -32,8 +32,8 @@ export default function ProductDetailsContent() {
               </div>
               <p className="text-secondary font-[300]">(0.00)</p>
             </div>
-            <p className="text-primary text-[24px] font-[500]">$36.00</p>
-            <p className="text-neutral mt-[10px]">
+            <p className="text-primary text-[20px] sm:text-[24px] font-[500]">$36.00</p>
+            <p className="text-neutral font-[300] sm:font-[400] mt-[10px]">
               Grursus mal suada faci lisis Lorem ipsum dolarorit more ametion
               consectetur Vesti at bulum nec odio aea the dumm summ ipsum that
               dolocons rsus mal suada and fadolorit to the consectetur elit.

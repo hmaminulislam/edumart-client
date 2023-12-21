@@ -10,8 +10,8 @@ import { IoClose } from "react-icons/io5";
 export default function ProductCard() {
   const location = useLocation();
   return (
-    <div className="relative border flex flex-col items-center justify-center border-[#E8E8E8] rounded-[6px] px-[20px] pt-[10px] pb-[25px]">
-      <div>
+    <div className="relative border flex flex-col items-center gap-[12px] justify-center border-[#E8E8E8] rounded-[6px] px-[20px] pt-[10px] pb-[25px]">
+      <div className="max-w-[160px] pt-[20px]">
         <Link to={`/shop/${"name"}`} state={{ prevUrl: location.pathname }}>
           <img src={productImg} alt="" />
         </Link>
@@ -49,15 +49,15 @@ export default function ProductCard() {
           </label>
           <input type="checkbox" id="Product_Modal" className="modal-toggle" />
           <div className="modal" role="dialog">
-            <div className="modal-box w-11/12 max-w-4xl h-[480px] flex flex-col md:flex-row items-center">
-              <div className="md:w-[50%]">
+            <div className="modal-box w-11/12 max-w-4xl h-[480px] flex flex-col md:flex-row gap-[30px] md:gap-[40px] items-center">
+              <div className="md:w-[45%] bg-[#f6f6f6] sm:p-[30px] p-[20px] rounded-sm">
                 <img
-                  className="max-w-[130px] sm:max-w-[200px] md:max-w-[100%]"
+                  className="max-w-[130px] sm:max-w-[200px] md:max-w-[240px] mx-auto"
                   src={productImg}
                   alt=""
                 />
               </div>
-              <div className="md:w-[50%] mt-[5px] sm:mt-0">
+              <div className="md:w-[55%] mt-[5px] sm:mt-0">
                 <h3 className="text-secondary text-[20px] sm:text-[24px] font-[500]">
                   Book Cover Design
                 </h3>

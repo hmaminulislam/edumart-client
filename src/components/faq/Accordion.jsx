@@ -32,9 +32,9 @@ const AccordionSection = ({
       </div>
 
       {isActiveAccordion && (
-        <p className="text-neutral font-[300] pt-[16px] pb-[20px] sm:px-[30px] px-[14px] bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px] text-[15px] sm:text-base">
-          {item.ans}
-        </p>
+          <p className="text-neutral font-[300] pt-[16px] pb-[20px] sm:px-[30px] px-[14px] bg-white border-x border-b border-[#e0e2ea] rounded-b-[6px] text-[15px] sm:text-base">
+            {item.ans}
+          </p>
       )}
     </div>
   );
@@ -49,12 +49,12 @@ export default function Accordion() {
         <div className="flex flex-col gap-[15px] max-w-[900px] mx-auto">
           {data.map((item, index) => (
             <div key={index}>
-              <AccordionSection
-                item={item}
-                isActiveAccordion={index === activeIndex}
-                setActiveIndex={setActiveIndex}
-                sectionIndex={index}
-              />
+                <AccordionSection
+                  item={item}
+                  isActiveAccordion={index === activeIndex}
+                  setActiveIndex={setActiveIndex}
+                  sectionIndex={index}
+                />
             </div>
           ))}
         </div>
