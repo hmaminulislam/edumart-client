@@ -30,7 +30,7 @@ export default function CourseCardLarge({ course }) {
           </span>
         </div>
         <Link
-          to={`/course/${"name"}`}
+          to={`/course/${_id}`}
           className="lg:text-[24px] text-[17px] text-secondary font-[500] mt-[14px] text-link-underline"
         >
           {name}
