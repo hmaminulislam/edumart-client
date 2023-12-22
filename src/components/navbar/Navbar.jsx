@@ -243,25 +243,27 @@ export default function Navbar() {
                 <div className="w-80 min-h-full bg-white py-6">
                   {/* Mobile side Navbar */}
                   <div>
-                    <div className="px-5 mb-10">
-                      <div className="max-w-[140px] block mb-10">
+                    <div className="px-5 mb-[20px]">
+                      <div className="max-w-[140px] block mb-[20px]">
                         <Link to="/">
                           <img src={LogoImg} alt="logo" />
                         </Link>
                       </div>
-                      <form className="relative flex items-center bg-[#e7effc]">
-                        <input
-                          type="text"
-                          placeholder="Search here..."
-                          className="text-[14px] rounded-[4px] py-[12px] px-[10px] w-[100%] absolute bg-[#e7effc]"
-                        />
-                        <button className="absolute right-[10px]">
-                          <FontAwesomeIcon
-                            className="text-[#3f3f3f]"
-                            icon={faMagnifyingGlass}
+                      <div className="relative block bg-[#e7effc]">
+                        <form className="flex items-center h-[45px]">
+                          <input
+                            type="text"
+                            placeholder="Search here..."
+                            className="text-[14px] rounded-[4px] py-[12px] px-[10px] w-[100%] absolute bg-[#e7effc]"
                           />
-                        </button>
-                      </form>
+                          <button className="absolute right-[10px]">
+                            <FontAwesomeIcon
+                              className="text-[#3f3f3f]"
+                              icon={faMagnifyingGlass}
+                            />
+                          </button>
+                        </form>
+                      </div>
                     </div>
                     <div className="flex flex-col">
                       <NavLink to="/" className="nav-link-mobile">
