@@ -8,19 +8,36 @@ export const api = createApi({
     baseUrl: liveApi,
   }),
   endpoints: (builder) => ({
+    // get all events
     getEvents: builder.query({
       query: () => `/events`,
     }),
+
+    // get all courses 
     getCourses: builder.query({
       query: () => `/courses`
     }),
+
+    // get all blogs
     getBlogs: builder.query({
       query: () => `/blogs`
     }),
+
+    // get single blog by id
     getBlogById: builder.query({
       query: (id) => `/blog/${id}`
+    }),
+
+    // get all products 
+    getProducts: builder.query({
+      query: () => `/products`
+    }),
+
+    // get product by id 
+    getProductById: builder.query({
+      query: (id) => `/product/${id}`
     }),
   }),
 });
 
-export const { useGetEventsQuery, useGetCoursesQuery, useGetBlogsQuery, useGetBlogByIdQuery } = api;
+export const { useGetEventsQuery, useGetCoursesQuery, useGetBlogsQuery, useGetBlogByIdQuery, useGetProductsQuery, useGetProductByIdQuery } = api;

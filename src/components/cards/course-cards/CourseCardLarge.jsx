@@ -19,11 +19,11 @@ export default function CourseCardLarge({ course }) {
     _id,
   } = course;
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center gap-[30px] p-[5px] lg:p-[14px] border border-[#E8E8E8] rounded-[6px]">
-      <Link to={`/course/${_id}`} className="lg:w-[35%]">
-        <img className="rounded-[5px]" src={img} alt="" />
+    <div className="flex flex-col md:flex-row lg:items-center gap-[30px] p-[8px] md:p-[10px] lg:p-[14px] border border-[#E8E8E8] rounded-[6px]">
+      <Link to={`/course/${_id}`} className="lg:w-[35%] md:w-[40%]">
+        <img className="rounded-[5px] h-[100%] object-cover" src={img} alt="" />
       </Link>
-      <div className="lg:w-[65%] px-[5px] lg:px-0">
+      <div className="lg:w-[65%] md:w-[60%] px-[5px] lg:px-0">
         <div className="mb-[10px]">
           <span className="py-[4px] px-[10px] text-[14px] bg-[#E8F9EF] inline-block rounded-full">
             {category}

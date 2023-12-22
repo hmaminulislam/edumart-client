@@ -50,7 +50,7 @@ export default function AllCourses() {
                       ))}
                 </div>
               ) : (
-                <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-[25px] lg:gap-[30px]">
+                <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-[25px] lg:gap-[30px]">
                   {data.courses.slice(0, 9).map((course) => (
                     <CourseCardLarge course={course} key={course._id} />
                   ))}

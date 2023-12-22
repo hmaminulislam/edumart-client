@@ -5,8 +5,14 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { IoFilterSharp, IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import ProductCard from "../cards/product-card/ProductCard";
+import { useGetProductsQuery } from "../../redux/api/api";
 
 export default function AllProducts() {
+
+  // all products get by redux api 
+  const { data, isLoading, error } = useGetProductsQuery(undefined)
+
+  // sort active handle 
   const [sortOpen, setSortOpen] = useState(false);
   const [sortName, setSortName] = useState("Newest");
   const sortBtn = useRef();
@@ -21,11 +27,13 @@ export default function AllProducts() {
       setSortOpen(false);
     }
   });
+
   // set sort name
   const handleSort = (e) => {
     const sortName = e.target.innerText;
     setSortName(sortName);
   };
+
   return (
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
@@ -44,7 +52,15 @@ export default function AllProducts() {
                   />
                   <IoSearch className="absolute left-[10px]" />
                 </div>
-                <p className="text-neutral font-[300]">Showing all 9 results</p>
+                {data ? (
+                  <p className="text-neutral font-[300]">
+                    Showing all {data?.length} results
+                  </p>
+                ) : (
+                  <p className="text-neutral font-[300]">
+                    Showing all 0 results
+                  </p>
+                )}
               </div>
             </div>
             <div className="md:hidden">
@@ -490,25 +506,18 @@ export default function AllProducts() {
           </div>
           {/* all course card */}
           <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
-            {data.map((course, index) => (
-              <ProductCard course={course} key={index} />
+            {data?.map((product) => (
+              <ProductCard product={product} key={product._id} />
             ))}
           </div>
+          {/* loading element */}
+          {isLoading && (
+            <div className="lg:w-[75%] md:w-[72%] flex items-start justify-start mt-[40px] md:mt-[100px]">
+              <span className="loading text-primary loading-dots loading-lg"></span>
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
 }
-
-// dummy data
-const data = [
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-  { name: "1" },
-];
