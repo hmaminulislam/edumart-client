@@ -13,9 +13,6 @@ export const courseSlice = createSlice({
     courseViewChange: (state, actions) => {
       state.view = actions.payload;
     },
-    courseDataSet: (state, actions) => {
-      state.courseData = actions.payload;
-    },
     filterCategory: (state, actions) => {
       const checkedToggle = actions.payload.checkedToggle;
       const checkValue = actions.payload.checkValue;
@@ -28,6 +25,6 @@ export const courseSlice = createSlice({
   },
 });
 
-export const { courseViewChange, courseDataSet, filterCategory } = courseSlice.actions;
+export const { courseViewChange, filterCategory } = courseSlice.actions;
 
 export default courseSlice.reducer;

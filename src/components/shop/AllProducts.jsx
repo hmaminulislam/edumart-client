@@ -12,6 +12,8 @@ export default function AllProducts() {
   // all products get by redux api 
   const { data, isLoading, error } = useGetProductsQuery(undefined)
 
+  console.log(error)
+
   // sort active handle 
   const [sortOpen, setSortOpen] = useState(false);
   const [sortName, setSortName] = useState("Newest");
@@ -505,15 +507,23 @@ export default function AllProducts() {
             </div>
           </div>
           {/* all course card */}
-          <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
-            {data?.map((product) => (
-              <ProductCard product={product} key={product._id} />
-            ))}
-          </div>
+          {data && (
+            <div className="lg:w-[75%] md:w-[72%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+              {data?.map((product) => (
+                <ProductCard product={product} key={product._id} />
+              ))}
+            </div>
+          )}
           {/* loading element */}
           {isLoading && (
-            <div className="lg:w-[75%] md:w-[72%] flex items-start justify-start mt-[40px] md:mt-[100px]">
+            <div className="lg:w-[75%] md:w-[72%] flex items-start justify-center mt-[40px] md:mt-[100px]">
               <span className="loading text-primary loading-dots loading-lg"></span>
+            </div>
+          )}
+          {/* fetch error  */}
+          {!isLoading && error && (
+            <div className="lg:w-[75%] md:w-[72%] flex justify-center mt-[40px] md:mt-[100px]">
+              <h3 className="text-center text-[22px] sm:text-[35px] text-secondary font-[600]">No Result Found</h3>
             </div>
           )}
         </div>

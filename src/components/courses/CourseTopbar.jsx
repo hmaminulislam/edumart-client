@@ -8,17 +8,16 @@ import { courseViewChange } from '../../redux/features/course/courseSlice';
 import SidebarFilter from './sidebar-filter/SidebarFilter';
 import SidebarFilterMob from './sidebar-filter/SidebarFilterMob';
 
-export default function CourseTopbar() {
+export default function CourseTopbar({ currentCourses }) {
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-
-  // courses layout view state 
+  // courses layout view state
   const { view } = useSelector((state) => state.course);
 
   const [sortName, setSortName] = useState("Newest");
   const [sortOpen, setSortOpen] = useState(false);
-  
-  // sort element dom select 
+
+  // sort element dom select
   const sortBtn = useRef();
   const sortBtnEleIcon2 = useRef();
   const sortElement = useRef();
@@ -55,7 +54,7 @@ export default function CourseTopbar() {
               />
               <IoSearch className="absolute left-[10px]" />
             </div>
-            <p className="text-neutral font-[300]">Showing all 9 results</p>
+            <p className="text-neutral font-[300]">Showing all {currentCourses ? currentCourses : 0} results</p>
           </div>
         </div>
         <div className="md:hidden">

@@ -51,8 +51,8 @@ export default function EventContent() {
             </div>
           </div>
           <p className="text-neutral mt-[20px] font-[300]">{data?.description}</p>
-          <div className="flex justify-between gap-[35px] py-[40px] px-[35px] border-l-[6px] mt-[35px] border-primary bg-[#F1F8FF]">
-            <p className="text-secondary font-[500] text-[22px]">
+          <div className="flex justify-between gap-[15px] sm:gap-[35px] py-[30px] sm:py-[40px] px-[18px] sm:px-[35px] border-l-[6px] mt-[35px] border-primary bg-[#F1F8FF]">
+            <p className="text-secondary font-[500] text-[16px] sm:text-[22px]">
               {data?.blockquote}
             </p>
             <FaQuoteRight className="text-[100px] text-neutral mt-[-30px]" />
