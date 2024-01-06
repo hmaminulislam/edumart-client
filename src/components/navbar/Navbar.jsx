@@ -327,7 +327,7 @@ export default function Navbar() {
                     </div>
                     <div className="flex justify-center items-center gap-[8px] mt-[30px]">
                       <button className="btn-login">Login</button>
-                      <button className="btn-register">Register</button>
+                      <Link to='/sign-up' className="btn-register">Register</Link>
                     </div>
                     {/* Social icons  */}
                     <div className="flex justify-center items-center gap-[10px] mt-[30px]">
