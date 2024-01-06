@@ -14,6 +14,7 @@ import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog-details/BlogDetails";
 import CourseDetails from "../pages/course-details/CourseDetails";
 import ProductDetails from "../pages/product-details/ProductDetails";
+import Register from "../pages/register/Register";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
           return fetch(`https://edumart-server.vercel.app/course/${params.id}`);
         },
         element: <CourseDetails />,
+      },
+      {
+        path: "/sign-up",
+        element: <Register />,
       },
     ],
   },

@@ -11,17 +11,15 @@ import Pagination from "../common/pagination/Pagination";
 export default function AllCourses() {
 
   // data load api redux
-  const { data, isLoading, error } = useGetCoursesQuery(undefined);
-
+    const { data, isLoading, error } = useGetCoursesQuery(undefined);
+   
   // pagination
   const [currentPage, setCurrentPage] = useState(1)
-  const [coursePerPage, SetCoursePerPage] = useState(9)
+  const coursePerPage = 9;
 
   const lastCourseIndex = currentPage * coursePerPage;
   const firstCourseIndex = lastCourseIndex - coursePerPage;
   const currentCourses = data?.courses?.slice(firstCourseIndex, lastCourseIndex)
-
-  console.log(currentCourses)
 
 
   // courses layout view state 

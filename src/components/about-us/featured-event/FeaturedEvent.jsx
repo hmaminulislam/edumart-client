@@ -45,10 +45,3 @@ export default function FeaturedEvent() {
     </div>
   );
 }
-
-// dummy data 
-// const data = [
-//     { name: "1" },
-//     { name: "1" },
-//     { name: "1" },
-// ];

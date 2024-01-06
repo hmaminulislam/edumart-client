@@ -1,18 +1,19 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { filterCategory } from '../../../redux/features/course/courseSlice';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { filterCategory } from "../../../redux/features/course/courseSlice";
 
 export default function SidebarFilter() {
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
+  // handle course Category
+  const handleCategory = (e) => {
 
-    // handle course Category
-    const handleCategory = (e) => {
-        const checkedToggle = e.target.checked;
-        const checkValue = e.target.value;
-        dispatch(filterCategory({checkedToggle, checkValue}))
-  }
-  
+    const checkedToggle = e.target.checked;
+    const checkValue = e.target.value;
+    dispatch(filterCategory({ checkedToggle, checkValue }));
+    
+  };
+
   return (
     <div>
       {/* category filter */}
@@ -23,33 +24,41 @@ export default function SidebarFilter() {
         <div className="flex flex-col gap-[12px] mt-[30px]">
           <div className="flex items-center gap-[10px]">
             <input
+              onClick={(e) => handleCategory(e)}
               className="checkbox-filter"
               type="checkbox"
-                          id="business-cat"
-                          value={'Business'}
+              id="business-cat"
+              value={"Business"}
             />
             <label htmlFor="business-cat" className="font-[300] cursor-pointer">
-              Business (5)
+              Business
             </label>
           </div>
           <div className="flex items-center gap-[10px]">
             <input
+              onClick={(e) => handleCategory(e)}
               className="checkbox-filter"
               type="checkbox"
               id="design-cat"
+              value={"Design"}
             />
             <label htmlFor="design-cat" className="font-[300] cursor-pointer">
-              Design (6)
+              Design
             </label>
           </div>
           <div className="flex items-center gap-[10px]">
             <input
+              onClick={(e) => handleCategory(e)}
               className="checkbox-filter"
               type="checkbox"
               id="development-cat"
+              value={"Development"}
             />
-            <label htmlFor="development-cat" className="font-[300] cursor-pointer">
-              Development (9)
+            <label
+              htmlFor="development-cat"
+              className="font-[300] cursor-pointer"
+            >
+              Development
             </label>
           </div>
           <div className="flex items-center gap-[10px]">
@@ -59,27 +68,28 @@ export default function SidebarFilter() {
               id="health-cat"
             />
             <label htmlFor="health-cat" className="font-[300] cursor-pointer">
-              Health & Fitness (0)
+              Health & Fitness
             </label>
           </div>
           <div className="flex items-center gap-[10px]">
             <input
+              onClick={(e) => handleCategory(e)}
               className="checkbox-filter"
               type="checkbox"
               id="programming-cat"
+              value={'Programming'}
             />
-            <label htmlFor="programming-cat" className="font-[300] cursor-pointer">
-              Programming (4)
+            <label
+              htmlFor="programming-cat"
+              className="font-[300] cursor-pointer"
+            >
+              Programming
             </label>
           </div>
           <div className="flex items-center gap-[10px]">
-            <input
-              className="checkbox-filter"
-              type="checkbox"
-              id="math-cat"
-            />
+            <input className="checkbox-filter" type="checkbox" id="math-cat" />
             <label htmlFor="math-cat" className="font-[300] cursor-pointer">
-              Math (0)
+              Math
             </label>
           </div>
         </div>

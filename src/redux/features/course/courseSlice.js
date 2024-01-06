@@ -1,9 +1,8 @@
-import { createSlice, current } from "@reduxjs/toolkit";
-import { useEffect } from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   view: true,
-  courseData: []
+  category: []
 };
 
 export const courseSlice = createSlice({
@@ -14,13 +13,16 @@ export const courseSlice = createSlice({
       state.view = actions.payload;
     },
     filterCategory: (state, actions) => {
+
       const checkedToggle = actions.payload.checkedToggle;
       const checkValue = actions.payload.checkValue;
-      if (checkedToggle) {
-        const newData = state.courseData.filter((course) => course.category == checkValue)
-        state.courseData = newData
+
+      if (!checkedToggle) {  
+        const newCate = state.category.filter((cate) => cate !== checkValue)
+        state.category = newCate;
+      } else {
+        state.category.push(checkValue)
       }
-      console.log(current(state))
     }
   },
 });

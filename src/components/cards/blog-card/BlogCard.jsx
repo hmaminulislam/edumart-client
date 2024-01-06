@@ -26,7 +26,7 @@ export default function BlogCard({ blog }) {
           />
         </Link>
       </div>
-      <div className="lg:px-[25px] sm:px-[20px] px-[14px] pb-[45px] pt-[25px]">
+      <div className="lg:px-[25px] sm:px-[20px] px-[14px] sm:pb-[45px] pb-[35px] pt-[25px]">
         <Link
           to={`/blog/${_id}`}
           state={{ prevUrl: location.pathname }}
@@ -37,11 +37,15 @@ export default function BlogCard({ blog }) {
         <div className="flex items-center gap-[20px] mt-[18px]">
           <div className="flex items-center gap-[4px]">
             <CiUser className="text-neutral" />
-            <span className="font-[300] text-neutral">{authorName}</span>
+            <span className="font-[300] sm:text-base text-[14px] text-neutral">
+              {authorName}
+            </span>
           </div>
           <div className="flex items-center gap-[4px]">
             <CiCalendarDate className="text-neutral" />{" "}
-            <span className="font-[300] text-neutral">{date}</span>
+            <span className="font-[300] sm:text-base text-[14px] text-neutral">
+              {date}
+            </span>
           </div>
         </div>
       </div>

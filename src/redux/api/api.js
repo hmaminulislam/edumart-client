@@ -13,29 +13,29 @@ export const api = createApi({
       query: () => `/events`,
     }),
 
-    // get all courses 
+    // get all courses
     getCourses: builder.query({
-      query: () => `/courses`
+      query: () => `/courses`,
     }),
 
     // get all blogs
     getBlogs: builder.query({
-      query: () => `/blogs`
+      query: () => `/blogs`,
     }),
 
     // get single blog by id
     getBlogById: builder.query({
-      query: (id) => `/blog/${id}`
+      query: (id) => `/blog/${id}`,
     }),
 
-    // get all products 
+    // get all products
     getProducts: builder.query({
-      query: () => `/products`
+      query: () => `/products`,
     }),
 
-    // get product by id 
+    // get product by id
     getProductById: builder.query({
-      query: (id) => `/product/${id}`
+      query: (id) => `/product/${id}`,
     }),
   }),
 });

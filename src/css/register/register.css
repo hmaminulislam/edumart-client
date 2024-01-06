@@ -1,0 +1,4 @@
+.register-input::placeholder {
+    color: #bdbdbd;
+    font-weight: 300;
+}

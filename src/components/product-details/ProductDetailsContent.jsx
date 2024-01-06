@@ -17,7 +17,7 @@ export default function ProductDetailsContent() {
     <div className="2xl:py-[120px] xl:py-[100px] md:py-[80px] sm:py-[60px] py-[50px]">
       <div className="container-main">
         {/* product details */}
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-[40px]">
+        <div className="flex flex-col md:flex-row sm:items-start md:items-center items-center gap-[40px]">
           <div className="md:w-[45%] bg-[#f6f6f6] md:p-[40px] p-[20px]">
             <img
               className="max-h-[500px] max-w-[200px] md:max-w-[260px] md:mx-auto"
